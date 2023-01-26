@@ -8,6 +8,11 @@
     </head>
     <body>
         <div class="container">
+            <header>
+                <h1>Aplicacion Final David Aparicio</h1>
+                <h2><?php echo $_SESSION['paginaEnCurso']; ?></h2>
+            </header>
+            
             <?php require_once $aVistas[$_SESSION['paginaEnCurso']]; ?>
             <footer> 
                 <a href="../../doc/CVDavidAparicioSir.pdf" target="blank"><img src="doc/img/cv.png" alt="CV David Aparicio"/></a>

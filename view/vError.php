@@ -1,6 +1,4 @@
-<header>
-    <h1>Detalle</h1>
-</header>
+
 <main>
     <form  name="error" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <table class="formulario">

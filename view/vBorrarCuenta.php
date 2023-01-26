@@ -1,6 +1,4 @@
-<header>
-    <h1>Borrar Cuenta</h1>
-</header>
+
 <main>
     <p>
         Bienvenido <?php echo $_SESSION['usuarioDAW201LoginLogoff']->getDescUsuario(); ?>

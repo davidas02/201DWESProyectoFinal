@@ -1,6 +1,4 @@
-<header>
-    <h1>Modificar Cuenta</h1>
-</header>
+
 <main>
     <form name="miCuenta" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <table class="formulario">

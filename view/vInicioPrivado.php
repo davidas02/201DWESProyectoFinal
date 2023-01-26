@@ -1,6 +1,4 @@
-<header>
-    <h1>Inicio Privado</h1>
-</header>
+
 <main>
         <form name="inicioPrivado" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <table class="formulario">

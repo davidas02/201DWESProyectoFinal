@@ -1,6 +1,4 @@
-<header>
-    <h1>LogIn</h1>
-</header>
+
 <main>
     <form name="loginLogoff" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="form" method="post">
         <div class="login">

@@ -1,6 +1,4 @@
-<header>
-    <h1>Registro</h1>
-</header>
+
 <main>
     <form name="registro" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <table class="formulario">

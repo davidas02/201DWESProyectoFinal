@@ -30,7 +30,7 @@ if (isset($_REQUEST['iniciarSesion'])) {
     if ($entradaOk) {
         //Comprobación de Usuario Correcto
         $oUsuario = UsuarioPDO::validarUsuario($_REQUEST['usuario'], $_REQUEST['password']);
-        if (is_null($oUsuario)) {
+        if (is_bool($oUsuario)) {
             $entradaOk = false;
         }
     }
