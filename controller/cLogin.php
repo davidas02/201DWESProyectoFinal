@@ -3,7 +3,7 @@
 require_once 'core/221024ValidacionFormularios.php';
 
 if (isset($_REQUEST['cancelar'])) {
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    $_SESSION['paginaEnCurso'] = 'inicioPublico';
     header('Location: index.php');
     exit();
 }
