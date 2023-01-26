@@ -17,19 +17,29 @@
                     
                 </div>
                 <div class="slide">
+                    <a href="doc/EjercicioResumenLoginLogoff-22-23/221109CatalogoDeRequisitos.pdf" target="_blank">
                     <img src="doc/img/catalogoRequsitos.png" alt="">
+                    </a>
                 </div>
                 <div class="slide">
+                    <a href="doc/EjercicioResumenLoginLogoff-22-23/230110DiagramaDeClasesLoginLogoffMulticapaPOO.pdf" target="_blank">
                     <img src="doc/img/diagramaClases.png" alt="">
+                    </a>
                 </div>
                 <div class="slide">
+                    <a href="doc/EjercicioResumenLoginLogoff-22-23/230110DiagramaDeClasesGenéricoMulticapaPOO.pdf" target="_blank">
                     <img src="doc/img/ficherosGenericos.png" alt="">
+                    </a>
                 </div>
                 <div class="slide">
+                    <a href="doc/EjercicioResumenLoginLogoff-22-23/201127ModeloFisicoDeDatos20-21.pdf" target="_blank">
                     <img src="doc/img/modeloFisicoDatos.png" alt="">
+                    </a>
                 </div>
                 <div class="slide">
+                    <a href="doc/EjercicioResumenLoginLogoff-22-23/230115LoginLogoffRelaciónDeFicheros.pdf" target="_blank">
                     <img src="doc/img/relacionFicheros.png" alt="">
+                    </a>
                 </div>
                 <div class="navigation-auto">
                     <div class="auto-btn1"></div>

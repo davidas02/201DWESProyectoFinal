@@ -11,7 +11,7 @@
  * Fecha Creacion:  14/11/2021
  * Última modificación: 14/11/2021
  */
-/*
+
 //ENTORNO DESARROLLO CASA
 // IP del servidor y Nombre de la base de datos
 define("DSN", "mysql:dbname=DAW201DBLoginLogoff;host=192.168.3.208");
@@ -19,16 +19,16 @@ define("DSN", "mysql:dbname=DAW201DBLoginLogoff;host=192.168.3.208");
 define("USER", "userDAW201LoginLogoff");
 // Contraseña con la que conectarse a la base de datos 
 define("PASSWORD", "paso");
-*/
-//ENTORNO DESARROLLO CLASE LOCAL
 
+//ENTORNO DESARROLLO CLASE LOCAL
+/*
 // IP del servidor y Nombre de la base de datos
 define("DSN", "mysql:dbname=DAW201DBLoginLogoff;host=192.168.20.19");
 // Usuario con el que se conecta 
 define("USER", "userDAW201LoginLogoff");
 // Contraseña con la que conectarse a la base de datos 
 define("PASSWORD", "paso");
-
+*/
 //ENTORNO DESARROLLO 1&1
 /*
 // IP del servidor y Nombre de la base de datos

@@ -19,8 +19,9 @@ if(isset($_REQUEST['registro'])){
 ];
     $miDB = new PDO(DSN, USER, PASSWORD);
         //Comprobamos que el usuario no haya introducido inyeccion de codigo y los datos están correctos
-        $aErrores['usuario'] = validacionFormularios::comprobarAlfabetico($_REQUEST['usuario'], 8, 4, obligatorio: 1);
-        $aErrores['password'] = validacionFormularios::validarPassword($_REQUEST['password'], 8, 4, 1, obligatorio: 1);
+        $aErrores['usuario'] = validacionFormularios::comprobarAlfabetico($_REQUEST['usuario'], 8, 4, OBLIGATORIO);
+        $aErrores['password'] = validacionFormularios::validarPassword($_REQUEST['password'], 8, 4, 1, OBLIGATORIO);
+        $aErrores['Rpassword'] = validacionFormularios::validarPassword($_REQUEST['password'], 8, 4, 1, OBLIGATORIO);
         $aErrores['nombre']= validacionFormularios::comprobarAlfaNumerico($_REQUEST['nombre'], 255, 2, 1);
         foreach ($aErrores as $claveError => $mensajeError) {
             if ($mensajeError != null) {
