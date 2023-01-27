@@ -29,7 +29,7 @@
                     ?>
                 </p>
                 <tr>
-                    <td><input type="submit" id="salir" value="Salir" name="salir"></td>
+                    <td><input type="submit" id="salir" value="Cerrrar Sesión" name="salir"></td>
 
                     <td><input type="submit" id="detalle" value="Detalle" name="detalle"></td>
 
@@ -37,6 +37,7 @@
 
                     <td><input type="submit" id="mtoDptos" name="mtoDptos" value="Mantenimiento Departamentos"></td>
                     <td><input type="submit" id="error" name="error" value="Error"></td>
+                    <td><input type="submit" id="rest" name="rest" value="REST"></td>
                 </tr>
                 <tr>
                 </tr>

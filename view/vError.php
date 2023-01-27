@@ -11,19 +11,19 @@
     <table class="tablaerror">
         <tr>
             <th>Codigo</td>
-            <td><?php echo $_SESSION['error']->getCodError(); ?></td>
+            <td><?php echo $codError; ?></td>
         </tr>
         <tr>
             <th>Descripcion</th>
-            <td><?php echo $_SESSION['error']->getDescError(); ?></td>
+            <td><?php echo $descError; ?></td>
         </tr>
         <tr>
             <th>Archivo</th>
-            <td><?php echo $_SESSION['error']->getArchivoError(); ?></td>
+            <td><?php echo $archivoError; ?></td>
         </tr>
         <tr>
             <th>Línea</th>
-            <td><?php echo $_SESSION['error']->getLineaError(); ?></td>
+            <td><?php echo $lineaError; ?></td>
         </tr>
     </table>
 </main>

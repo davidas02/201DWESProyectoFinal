@@ -16,7 +16,8 @@ $aControladores = [ //Array de controladores
     "wip"=>"controller/cWIP.php",
     "miCuenta"=>"controller/cMiCuenta.php",
     "borrarUsuario"=>"controller/cBorrarCuenta.php",
-    "error"=>"controller/cError.php"
+    "error"=>"controller/cError.php",
+    "rest"=>"controller/cRest.php"
     ];
 $aVistas=[ //array de vistas
     "login" => "view/vLogin.php",
@@ -28,5 +29,6 @@ $aVistas=[ //array de vistas
     "wip"=>"view/vWIP.php",
     "miCuenta"=>"view/vMiCuenta.php",
     "borrarUsuario"=>"view/vBorrarCuenta.php",
-    "error"=>"view/vError.php"
+    "error"=>"view/vError.php",
+    "rest"=>"view/vRest.php"
 ];
