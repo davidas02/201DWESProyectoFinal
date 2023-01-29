@@ -7,7 +7,7 @@ class DBPDO implements DB {
  * Funcion para ejecutar una consulta SQL Es implementado de la clase DB
  * @param string $entradaSQL consulta sql
  * @param string $parametros parametros de la consulta
- * @return boolean Devuelve true si la consulta se ha ejecutado o flase si la consulta no se ha ejecutado
+ * @return boolean Devuelve true si la consulta se ha ejecutado o false si la consulta no da ninfun resultado
  */
     public static function ejecutarConsulta($entradaSQL, $parametros = null) {
         try {

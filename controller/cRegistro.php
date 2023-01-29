@@ -28,6 +28,9 @@ if(isset($_REQUEST['registro'])){
                 $entradaOk = false;
             }
         }
+        if(!UsuarioPDO::validarCodNoExiste($_REQUEST['usuario'])){
+            $entradaOk=false;
+        }
         if ($_REQUEST['password']==$_REQUEST['Rpassword']&$entradaOk) {
             $oUsuario=UsuarioPDO::altaUsuario($_REQUEST['usuario'], $_REQUEST['password'], $_REQUEST['nombre']);
         if(!is_bool($oUsuario)){

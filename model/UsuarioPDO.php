@@ -32,8 +32,7 @@ public static function validarUsuario($codUsuario, $password) {
         $alta = <<<sql
                 INSERT INTO T01_Usuario values("{$codUsuario}",sha2("{$codUsuario}{$password}",256),"{$descUsuario}",now(),1,'usuario',null);
                 sql;
-        if (self::validarCodNoExiste($codUsuario)) {
-            DBPDO::ejecutarConsulta($alta);
+           if(DBPDO::ejecutarConsulta($alta)){
             return new Usuario($codUsuario, hash('sha256', ($codUsuario . $password)), $descUsuario, 1, new DateTime("now"));
         } else {
             return false;
