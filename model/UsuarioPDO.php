@@ -2,7 +2,6 @@
 
 class UsuarioPDO implements UsuarioDB {
 public static function validarUsuario($codUsuario, $password) {
-        try {
             $query = <<<QUERY
                select * from T01_Usuario where T01_CodUsuario="$codUsuario" AND T01_Password=sha2("{$codUsuario}{$password}",256);
                QUERY;
@@ -13,9 +12,6 @@ public static function validarUsuario($codUsuario, $password) {
             } else {
                 return false;
             }
-        } catch (Exception $ex) {
-            echo $ex->getMessage();
-        }
     }
 
     public static function registrarUltimaConexion($oUsuario) {

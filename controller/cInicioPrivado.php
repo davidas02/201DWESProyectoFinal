@@ -31,11 +31,7 @@ if(isset($_REQUEST['rest'])){
     exit(); 
 }
 if(isset($_REQUEST['error'])){
-    $_SESSION['paginaAnterior']='inicioPrivado';
-    $_SESSION['paginaEnCurso']="error";
-    DBPDO::ejecutarConsulta("Select * from false;");
-    header("Location: index.php");
-    exit();
+    DBPDO::ejecutarConsulta("Select * from meInventoElNombreDeUnaTablaQueNoExiste;");
 }
 require_once $aVistas['layout'];
 ?>

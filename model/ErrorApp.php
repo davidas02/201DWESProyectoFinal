@@ -15,7 +15,7 @@ class ErrorApp {
      * @param string $lineaError Linea del error
      * @param string $paginaSiguiente siguiente pagina
      */
-    function __construct(int $codError,string $descError,string $archivoError,string $lineaError,string $paginaSiguiente) {
+    function __construct($codError, $descError, $archivoError, $lineaError, $paginaSiguiente) {
         $this->codError = $codError;
         $this->descError = $descError;
         $this->archivoError = $archivoError;

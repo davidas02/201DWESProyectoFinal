@@ -16,8 +16,10 @@ class DBPDO implements DB {
             $consulta->execute($parametros);
             return $consulta;
         } catch (PDOException $exc) {
-            header("Location: index.php");
             $_SESSION['error']=new ErrorApp($exc->getCode(), $exc->getMessage(), $exc->getFile(), $exc->getLine(),$_SESSION['paginaAnterior']);
+            $_SESSION['paginaEnCurso'] = 'error';
+            header('Location: index.php');
+            exit;
         } finally {
             unset($oPDO);
         }
