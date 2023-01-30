@@ -1,19 +1,19 @@
 
 <main>
     <p>
-        Bienvenido <?php echo $_SESSION['usuarioDAW201LoginLogoff']->getDescUsuario(); ?>
+        Bienvenido <?php echo $_SESSION['usuarioDAW201AppFinal']->getDescUsuario(); ?>
     </p>
 
     <?php
 //comprobamos el numero de conexiones si es mayor a 1 tambien mostramos la fecha y hora de la ultima conexion
-    if ($_SESSION['usuarioDAW201LoginLogoff']->getNumConexiones() > 1) {
+    if ($_SESSION['usuarioDAW201AppFinal']->getNumConexiones() > 1) {
         ?>
         <p>
-            Ultimo inicio de sesión: "<?php echo $_SESSION['usuarioDAW201LoginLogoff']->getFechaHoraUltimaConexionAnterior(); ?>;
+            Ultimo inicio de sesión: "<?php echo $_SESSION['usuarioDAW201AppFinal']->getFechaHoraUltimaConexionAnterior(); ?>;
 
         </p>
         <p>
-            Te has conectado <?php echo $_SESSION['usuarioDAW201LoginLogoff']->getNumConexiones(); ?> veces
+            Te has conectado <?php echo $_SESSION['usuarioDAW201AppFinal']->getNumConexiones(); ?> veces
         </p>
     <?php } else { ?>
         <p>

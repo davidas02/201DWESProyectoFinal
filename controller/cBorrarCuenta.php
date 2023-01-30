@@ -9,12 +9,12 @@ if (isset($_REQUEST['volver'])) {
 }
 
 if (isset($_REQUEST['borrar'])) {
-    if ($_SESSION['usuarioDAW201LoginLogoff']->getcodUsuario()!=$_REQUEST['usuario']||$_REQUEST['password'] != $_REQUEST['Rpassword'] || !UsuarioPDO::validarUsuario($_REQUEST['usuario'], $_REQUEST['password'])) {
+    if ($_SESSION['usuarioDAW201AppFinal']->getcodUsuario()!=$_REQUEST['usuario']||$_REQUEST['password'] != $_REQUEST['Rpassword'] || !UsuarioPDO::validarUsuario($_REQUEST['usuario'], $_REQUEST['password'])) {
         $usuarioCorrecto = false;
     }
     if ($usuarioCorrecto) {
-        UsuarioPDO::borrarUsuario($_SESSION['usuarioDAW201LoginLogoff']->getCodUsuario());
-        $_SESSION['usuarioDAW201LoginLogoff'] = null;
+        UsuarioPDO::borrarUsuario($_SESSION['usuarioDAW201AppFinal']->getCodUsuario());
+        $_SESSION['usuarioDAW201AppFinal'] = null;
         session_destroy();
         $_SESSION['paginaEnCurso'] = 'inicioPublico';
         header('Location: index.php');

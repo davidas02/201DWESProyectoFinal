@@ -1,6 +1,6 @@
 <?php
 
-class ErrorLoginLogoff {
+class ErrorApp {
 
     private $codError;
     private $descError;

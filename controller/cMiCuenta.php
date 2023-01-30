@@ -21,14 +21,14 @@ if(isset($_REQUEST['cambiarPassword'])){
             }
         }
         if($entradaOk){
-        UsuarioPDO::cambiarPassword($_SESSION['usuarioDAW201LoginLogoff'], hash("sha256",($_SESSION['usuarioDAW201LoginLogoff']->getCodUsuario().$_REQUEST['Npassword'])));
+        UsuarioPDO::cambiarPassword($_SESSION['usuarioDAW201AppFinal'], hash("sha256",($_SESSION['usuarioDAW201AppFinal']->getCodUsuario().$_REQUEST['Npassword'])));
         }
     }
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
     header('Location: index.php');
 }
 if (isset($_REQUEST['aceptar'])){
-    UsuarioPDO::modificarUsuario($_SESSION['usuarioDAW201LoginLogoff'], $_REQUEST['nombre']);
+    UsuarioPDO::modificarUsuario($_SESSION['usuarioDAW201AppFinal'], $_REQUEST['nombre']);
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
     header('Location: index.php');
     

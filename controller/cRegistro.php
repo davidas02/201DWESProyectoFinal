@@ -35,7 +35,7 @@ if(isset($_REQUEST['registro'])){
             $oUsuario=UsuarioPDO::altaUsuario($_REQUEST['usuario'], $_REQUEST['password'], $_REQUEST['nombre']);
         if(!is_bool($oUsuario)){
             $_SESSION['paginaEnCurso']='inicioPrivado';
-            $_SESSION['usuarioDAW201LoginLogoff']=$oUsuario;
+            $_SESSION['usuarioDAW201AppFinal']=$oUsuario;
         }
         header('Location: index.php');
             exit();
