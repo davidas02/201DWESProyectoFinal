@@ -6,6 +6,7 @@ require_once 'model/Usuario.php';
 require_once 'model/UsuarioPDO.php';
 require_once 'model/DBPDO.php';
 require_once 'model/ErrorApp.php';
+require_once 'model/REST.php';
 define("OBLIGATORIO", 1);
 $aControladores = [ //Array de controladores 
     "login" => "controller/cLogin.php",
@@ -17,7 +18,8 @@ $aControladores = [ //Array de controladores
     "miCuenta"=>"controller/cMiCuenta.php",
     "borrarUsuario"=>"controller/cBorrarCuenta.php",
     "error"=>"controller/cError.php",
-    "rest"=>"controller/cRest.php"
+    "rest"=>"controller/cRest.php",
+    "cambiarPassword"=>"controller/cCambiarPassword.php"
     ];
 $aVistas=[ //array de vistas
     "login" => "view/vLogin.php",
@@ -30,5 +32,6 @@ $aVistas=[ //array de vistas
     "miCuenta"=>"view/vMiCuenta.php",
     "borrarUsuario"=>"view/vBorrarCuenta.php",
     "error"=>"view/vError.php",
-    "rest"=>"view/vRest.php"
+    "rest"=>"view/vRest.php",
+    "cambiarPassword"=>"view/vCambiarPassword.php"
 ];
