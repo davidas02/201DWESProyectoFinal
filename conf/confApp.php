@@ -1,4 +1,10 @@
 <?php
+/**
+ * Fichero almacenaje de las direcciones de los controladores y las vistas
+ * @author David Aparicio
+ * @version 1.0
+ * 
+ */
 require_once 'core/221024ValidacionFormularios.php';
 require_once 'model/DB.php';
 require_once 'model/UsuarioDB.php';

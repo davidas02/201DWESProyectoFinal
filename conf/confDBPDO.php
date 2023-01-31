@@ -5,7 +5,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 
-/*
+/**
  * Fichero de configuracion que contiene la conexion a la base de datos PDO
  * @author David Aparicio Sir
  * Fecha Creacion:  14/11/2021
