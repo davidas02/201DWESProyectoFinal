@@ -31,6 +31,7 @@ if(isset($_REQUEST['rest'])){
     exit(); 
 }
 if(isset($_REQUEST['error'])){
+    $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
     DBPDO::ejecutarConsulta("Select * from meInventoElNombreDeUnaTablaQueNoExiste;");
 }
 require_once $aVistas['layout'];

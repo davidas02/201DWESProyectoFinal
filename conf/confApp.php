@@ -18,7 +18,7 @@ $aControladores = [ //Array de controladores
     "miCuenta"=>"controller/cMiCuenta.php",
     "borrarUsuario"=>"controller/cBorrarCuenta.php",
     "error"=>"controller/cError.php",
-    "rest"=>"controller/cRest.php",
+    "rest"=>"controller/cREST.php",
     "cambiarPassword"=>"controller/cCambiarPassword.php"
     ];
 $aVistas=[ //array de vistas
@@ -32,6 +32,6 @@ $aVistas=[ //array de vistas
     "miCuenta"=>"view/vMiCuenta.php",
     "borrarUsuario"=>"view/vBorrarCuenta.php",
     "error"=>"view/vError.php",
-    "rest"=>"view/vRest.php",
+    "rest"=>"view/vREST.php",
     "cambiarPassword"=>"view/vCambiarPassword.php"
 ];
