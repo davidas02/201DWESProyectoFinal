@@ -3,7 +3,6 @@
 $usuarioCorrecto = true;
 if (isset($_REQUEST['volver'])) {
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
-    $_SESSION['paginaAnterior'] = "inicioPrivado";
     header('Location: index.php');
     exit();
 }

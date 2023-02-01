@@ -35,7 +35,7 @@
 
                     <input type="submit" id="modificar" value="Modificar Perfil" name="modificar">
 
-                    <input type="submit" id="mtoDptos" name="mtoDptos" value="Mantenimiento Departamentos">
+                    <input type="submit" id="mtoDptos" name="mtoDptos" value="Mto. Departamentos">
                     <input type="submit" id="error" name="error" value="Error">
                    <input type="submit" id="rest" name="rest" value="REST">
             </div>

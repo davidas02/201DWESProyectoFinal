@@ -14,7 +14,6 @@ $response_json = file_get_contents($req_url);
 		$response = json_decode($response_json);
 		// Check for success
 		if('success' == $response->result) {
-			
 			$salida = round(($valor * $response->conversion_rates->$destino), 2);
 		}
     return $salida;

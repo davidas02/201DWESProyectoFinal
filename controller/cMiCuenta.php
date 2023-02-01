@@ -1,4 +1,5 @@
 <?php
+$_SESSION['paginaAnterior']="inicioPrivado";
 if (isset($_REQUEST['volver'])) {
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
     header('Location: index.php');
