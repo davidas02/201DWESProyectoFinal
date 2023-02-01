@@ -27,10 +27,12 @@ if(isset($_REQUEST['mtoDptos'])){
 if(isset($_REQUEST['rest'])){
     $_SESSION['paginaEnCurso']='rest';
     $_SESSION['paginaAnterior']='inicioPrivado';
+    $_SESSION['muestraApiAjena']=null;
     header("Location: index.php");
     exit(); 
 }
 if(isset($_REQUEST['error'])){
+    $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
     DBPDO::ejecutarConsulta("Select * from meInventoElNombreDeUnaTablaQueNoExiste;");
 }
 require_once $aVistas['layout'];
