@@ -21,6 +21,6 @@
             <input type="submit" value="Volver" name="volver" id="volver"/>
             <br>
             <label for="resultado">Resultado:</label>
-            <input type="text" id="resultado" name="resultado" value="<?php echo $muestra; ?>" readonly="">
+            <input type="text" id="resultado" name="resultado" value="<?php echo $muestra; ?>" readonly="true">
         </form>
 </main>

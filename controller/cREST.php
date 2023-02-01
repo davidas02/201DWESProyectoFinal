@@ -29,13 +29,13 @@ if(isset($_REQUEST['convertir'])){
     
     if($entradaOk&$_REQUEST['origen']!=$_REQUEST['destino']){
         $aRespuestas=[
-    "valor"=>$_REQUEST['cantidad'],
-    "origen"=>$_REQUEST['origen'],
-    "destino"=>$_REQUEST['destino']
-];
+            "valor"=>$_REQUEST['cantidad'],
+            "origen"=>$_REQUEST['origen'],
+            "destino"=>$_REQUEST['destino']
+        ];
         $salida= REST::convertirMoneda($aRespuestas['valor'], $aRespuestas['origen'],$aRespuestas['destino']);
-    $muestra=$aRespuestas['valor']." ".$aRespuestas['origen']." es igual a ". $salida.$aRespuestas['destino'];
     }
+    $muestra=$aRespuestas['valor']." ".$aRespuestas['origen']." es igual a ". $salida.$aRespuestas['destino'];
     header('Location: index.php');
     exit();
 }
