@@ -31,11 +31,11 @@
                 T01_ImagenUsuario MEDIUMBLOB NULL
                 )engine=innoDB;
             create table if not exists T02_Departamento(
-                T02_codDepartamento varchar(3) primary key,
-                T02_descDepartamento varchar(255) NULL,
-                T02_fechaBaja int NULL,
-                T02_volumenNegocio float NULL,
-                T02_fechaAlta datetime NULL 
+                T02_CodDepartamento varchar(3) primary key,
+                T02_DescDepartamento varchar(255) NULL,
+                T02_FechaBaja int NULL,
+                T02_VolumenNegocio float NULL,
+                T02_FechaAlta datetime NULL 
                 )engine=Innodb;
     SQL);
         $creacion->execute(); //Ejecuto la consulta

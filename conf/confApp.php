@@ -13,6 +13,8 @@ require_once 'model/UsuarioPDO.php';
 require_once 'model/DBPDO.php';
 require_once 'model/ErrorApp.php';
 require_once 'model/REST.php';
+require_once 'model/Departamento.php';
+require_once 'model/DepartamentoPDO.php';
 define("OBLIGATORIO", 1);
 $aControladores = [ //Array de controladores 
     "login" => "controller/cLogin.php",
@@ -25,7 +27,8 @@ $aControladores = [ //Array de controladores
     "borrarUsuario"=>"controller/cBorrarCuenta.php",
     "error"=>"controller/cError.php",
     "rest"=>"controller/cREST.php",
-    "cambiarPassword"=>"controller/cCambiarPassword.php"
+    "cambiarPassword"=>"controller/cCambiarPassword.php",
+    "mantenimiento"=>"controller/cMtoDepartamentos.php"
     ];
 $aVistas=[ //array de vistas
     "login" => "view/vLogin.php",
@@ -39,5 +42,6 @@ $aVistas=[ //array de vistas
     "borrarUsuario"=>"view/vBorrarCuenta.php",
     "error"=>"view/vError.php",
     "rest"=>"view/vREST.php",
-    "cambiarPassword"=>"view/vCambiarPassword.php"
+    "cambiarPassword"=>"view/vCambiarPassword.php",
+    "mantenimiento"=>"view/vMtoDepartamentos.php"
 ];

@@ -19,7 +19,7 @@ if(isset($_REQUEST['modificar'])){
     exit(); 
 }
 if(isset($_REQUEST['mtoDptos'])){
-    $_SESSION['paginaEnCurso']='wip';
+    $_SESSION['paginaEnCurso']='mantenimiento';
     $_SESSION['paginaAnterior']='inicioPrivado';
     header("Location: index.php");
     exit(); 

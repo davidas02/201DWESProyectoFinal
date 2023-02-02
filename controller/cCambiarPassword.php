@@ -20,8 +20,12 @@ if(isset($_REQUEST['cambiarPassword'])){
                 $entradaOk = false;
             }
         }
+        if(hash('sha256', $_SESSION['usuarioDAW201AppFinal']->getCodUsuario().$_REQUEST['Apassword'])!=$_SESSION['usuarioDAW201AppFinal']->getPassword()||$_REQUEST['Apassword']==$_REQUEST['Npassword']||$_REQUEST['Npassword']!=$_REQUEST['RNpassword']){
+            $entradaOk = false;
+        }
         if($entradaOk){
-        UsuarioPDO::cambiarPassword($_SESSION['usuarioDAW201AppFinal'], hash("sha256",($_SESSION['usuarioDAW201AppFinal']->getCodUsuario().$_REQUEST['Npassword'])));
+            $password=hash('sha256',($_SESSION['usuarioDAW201AppFinal']->getCodUsuario().$_REQUEST['Npassword']));
+        UsuarioPDO::cambiarPassword($_SESSION['usuarioDAW201AppFinal'], $password);
         }
     }
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];

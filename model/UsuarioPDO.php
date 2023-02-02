@@ -40,6 +40,9 @@ public static function validarUsuario($codUsuario, $password) {
             UPDATE T01_Usuario SET T01_Password="{$newPassword}" WHERE T01_CodUsuario="{$oUsuario->getCodUsuario()}";
         sq3;
         $ejecucionOK=DBPDO::ejecutarConsulta($modificarUsuario);
+        if($ejecucionOK){
+            $oUsuario->setPassword($newPassword);
+        }
         return $ejecucionOK;
     }
 
