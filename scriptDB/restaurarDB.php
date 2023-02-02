@@ -15,10 +15,10 @@
         </div>
     </header>
     <?php
-    include_once '../conf/confDBPDOExplotacion.php';
+    include_once '../conf/confDBPDO.php';
     try {
         //Establecimiento de la conexión 
-        $miDB = new PDO(DSN, USER, PASS);
+        $miDB = new PDO(DSN, USER, PASSWORD);
 
         $creacion = $miDB->prepare(<<<SQL
             create table if not exists T01_Usuario(

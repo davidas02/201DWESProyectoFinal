@@ -15,10 +15,10 @@
         </div>
     </header>
     <?php
-    include_once '../conf/confDBPDOExplotacion.php';
+    include_once '../conf/confDBPDO.php';
     try {
         //Establecimiento de la conexión 
-        $miDB = new PDO(DSN, USER, PASS);
+        $miDB = new PDO(DSN, USER, PASSWORD);
        
         $insercion2=$miDB->prepare(<<<SQL
         insert into T02_Departamento values
