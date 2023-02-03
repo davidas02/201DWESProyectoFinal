@@ -249,6 +249,14 @@ h2{
     align-items: center;
     height: 100%;
 }
+.mantenimiento{
+    display: flex;
+    height: 100%;
+    width: 100%; 
+}
+.mantenimiento tr,.mantenimiento td,.mantenimiento th{
+    border: 1px solid black;
+}
 /*Pie de pagina*/
 footer{
     flex: 0 0 8%;

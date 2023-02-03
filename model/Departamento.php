@@ -41,7 +41,11 @@ class Departamento {
     function __construct($codDepartamento,$descDepartamento,$fechaBaja=null,$volumenNegocio,$fechaAlta) {
         $this->codDepartamento=$codDepartamento;
         $this->descDepartamento=$descDepartamento;
+        if($fechaBaja!=null){
         $this->fechaBaja= new DateTime($fechaBaja);
+        }else{
+            $this->fechaBaja=$fechaBaja;
+        }
         $this->volumenNegocio=$volumenNegocio;
         $this->fechaAlta=$fechaAlta;
     }

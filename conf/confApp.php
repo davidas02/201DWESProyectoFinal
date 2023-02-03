@@ -28,7 +28,7 @@ $aControladores = [ //Array de controladores
     "error"=>"controller/cError.php",
     "rest"=>"controller/cREST.php",
     "cambiarPassword"=>"controller/cCambiarPassword.php",
-    "mantenimiento"=>"controller/cMtoDepartamentos.php"
+    "mantenimientoDepartamentos"=>"controller/cMtoDepartamentos.php"
     ];
 $aVistas=[ //array de vistas
     "login" => "view/vLogin.php",
@@ -43,5 +43,5 @@ $aVistas=[ //array de vistas
     "error"=>"view/vError.php",
     "rest"=>"view/vREST.php",
     "cambiarPassword"=>"view/vCambiarPassword.php",
-    "mantenimiento"=>"view/vMtoDepartamentos.php"
+    "mantenimientoDepartamentos"=>"view/vMtoDepartamentos.php"
 ];
