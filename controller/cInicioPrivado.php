@@ -21,7 +21,6 @@ if(isset($_REQUEST['modificar'])){
 if(isset($_REQUEST['mtoDptos'])){
     $_SESSION['paginaEnCurso']='mantenimientoDepartamentos';
     $_SESSION['paginaAnterior']='inicioPrivado';
-    $_SESSION['departamentos']=false;
     header("Location: index.php");
     exit(); 
 }

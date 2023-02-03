@@ -13,14 +13,14 @@
                 <label for="todos">Todos</label>
                 <input type="radio" name="estado" value="todos" id="todos" checked="checked" />
             </div>
-            <?php if ($_SESSION['departamentos'] != false) { ?>
+            <?php if ($aDepartamentos != false) { ?>
             <table style="border: 1px solid black; border-collapse: collapse">
                     <thead>
                         <tr><th>CodUsuario</th><th>DescUsuario</th><th>Fecha Baja</th><th>VolumenNegocio</th><th>FechaAlta</th></tr>
                     </thead>
                     <tbody>
                         <?php
-                        $aDepartamentos = $_SESSION['departamentos'];
+                        
                         foreach ($aDepartamentos as $posicion => $oDepartamento) {
                             
                             ?>
