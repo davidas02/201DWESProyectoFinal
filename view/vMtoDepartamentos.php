@@ -1,6 +1,6 @@
 <main>
     <div class="mantenimiento">
-        <form action="<?php echo $_SERVER['PHP_SELF'] ?>">
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <input type="submit" value="Volver" id="volver" name="volver"/>
             <div id="buscar">
                 <input type="text" id="codDepto" value="<?php echo $aRespuestas['buscarDepartamento']; ?>" name="codDepto">

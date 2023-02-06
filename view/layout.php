@@ -15,9 +15,13 @@
             
             <?php require_once $aVistas[$_SESSION['paginaEnCurso']]; ?>
             <footer>
+                <?php
+                    if($_SESSION['paginaEnCurso']!="tecnologias"){
+                ?>
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <input type="submit" value="Tecnologías" name="tecnologias" />
                 </form>
+                    <?php } ?>
                 <a style="text-decoration: none; color: black;" href="https://www.renault.es" target="blank">Pagina a imitar</a>
                 <a href="../../doc/CVDavidAparicioSir.pdf" target="blank"><img src="doc/img/cv.png" alt="CV David Aparicio"/></a>
                 <a href="../../201DWESProyectoDWES/indexProyectoDWES.php"><img src="doc/img/home.png" alt="HOME"/></a>
