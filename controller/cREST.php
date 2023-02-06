@@ -4,7 +4,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 if (isset($_REQUEST['volver'])) {
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     $_SESSION['muestraApiAjena']=null;
     header('Location: index.php');
     exit();

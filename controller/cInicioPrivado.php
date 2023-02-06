@@ -13,7 +13,7 @@ if(isset($_REQUEST['detalle'])){
     exit();
 }
 if(isset($_REQUEST['modificar'])){
-    $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
+    $_SESSION['paginaAnterior']='inicioPrivado';
     $_SESSION['paginaEnCurso']='miCuenta';
     header("Location: index.php");
     exit(); 

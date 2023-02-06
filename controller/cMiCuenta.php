@@ -1,7 +1,7 @@
 <?php
 $_SESSION['paginaAnterior']="inicioPrivado";
 if (isset($_REQUEST['volver'])) {
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     header('Location: index.php');
     exit();
 }
@@ -15,7 +15,7 @@ if (isset($_REQUEST['aceptar'])){
     $errorNombre= validacionFormularios::comprobarAlfaNumerico($_REQUEST['nombre'], 255, 4, OBLIGATORIO);
     if ($errorNombre==null){
         UsuarioPDO::modificarUsuario($_SESSION['usuarioDAW201AppFinal'], $_REQUEST['nombre']);
-        $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+        $_SESSION['paginaEnCurso'] = 'inicioPrivado';
         header('Location: index.php');
         exit();
     }
