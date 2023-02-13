@@ -22,8 +22,8 @@
                     </a>
                 </div>
                 <div class="slide">
-                    <a href="doc/EjercicioResumenLoginLogoff-22-23/230110DiagramaDeClasesLoginLogoffMulticapaPOO.pdf" target="_blank">
-                    <img src="doc/img/diagramaClases.png" alt="">
+                    <a href="doc/img/230207_DiagramaUML.png" target="_blank">
+                    <img src="doc/img/230207_DiagramaUML.png" alt="">
                     </a>
                 </div>
                 <div class="slide">
