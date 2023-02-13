@@ -5,20 +5,40 @@
             <tr>
                 <td><label for="usuario">Usuario:</label></td>
                 <td><input style="background-color:yellow;" type="text" name="usuario" class="usuario"/></td>
+                <td style="color: red;">
+                    <?php echo $aErrores['usuario']; ?>
+                </td>
             </tr>
             <tr>
                 <td><label for="password">Password:</label></td>
                 <td><input style="background-color:yellow;" type="password" name="password" class="password" /></td>
+                <td style="color: red;">
+                    <?php echo $aErrores['password']; ?>
+                </td>
             </tr>
             <tr>
                 <td><label for="Rpassword">Repita el Password:</label></td>
                 <td><input style="background-color:yellow;" type="password" name="Rpassword" class="password" /></td>
+                <td style="color: red;">
+                    <?php echo $aErrores['Rpassword']; ?>
+                </td>
             </tr>
             <tr>
                 <td><label for="nombre">Nombre:</label></td>
                 <td><input style="background-color:yellow;" type="text" name="nombre" class="nombre" /></td>
+                <td style="color: red;">
+                    <?php echo $aErrores['nombre']; ?>
+                </td>
             </tr>
-
+            <?php
+            if($aErrores['valido']!=null){
+                ?>
+                <tr>
+                    <td style="color: red;"><?php echo $aErrores['valido']; ?></td>
+                </tr>
+                <?php
+            }
+            ?>
             <tr>
                 <td><input type="submit" id="registro" value="Registrarse" name="registro"></td>
                 <td><input type="submit" value="Volver" name="volver" id="volver"></td>

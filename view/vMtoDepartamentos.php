@@ -5,13 +5,13 @@
             <div id="buscar">
                 <input type="text" id="codDepto" value="<?php echo $aRespuestas['buscarDepartamento']; ?>" name="codDepto">
                 <input type="submit" value="Buscar Departamento" name="buscar"  id="buscar"/>
-                <p>ESTADO:</p> 
+                <!--<p>ESTADO:</p> 
                 <label for="alta">Alta</label>
                 <input type="radio" name="estado" id="alta" value="Alta" />
                 <label for="baja">Baja</label>
                 <input type="radio" name="estado" id="baja" value="baja" />
                 <label for="todos">Todos</label>
-                <input type="radio" name="estado" value="todos" id="todos" checked="checked" />
+                <input type="radio" name="estado" value="todos" id="todos" checked="checked" />-->
             </div>
             <?php if ($aDepartamentos != false) { ?>
             <table style="border: 1px solid black; border-collapse: collapse">
