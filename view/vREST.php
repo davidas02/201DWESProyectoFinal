@@ -18,8 +18,9 @@
             </select>
             <input type="submit" value="Convertir" name="convertir" id="convertir"/>
             <br>
-            <p><?php echo $_SESSION['muestraApiAjena']; ?></p>
-            <br>
             <input type="submit" value="Volver" name="volver" id="volver"/>
+            <br>
+            <label for="resultado">Resultado:</label>
+            <input type="text" id="resultado" name="resultado" value="<?php echo $muestra; ?>" readonly="true">
         </form>
 </main>

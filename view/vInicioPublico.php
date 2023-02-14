@@ -1,6 +1,6 @@
 <main>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <button type="submit" class="button" id="login" name="login" value="login"><span>Iniciar Sesion</span></button>
+        <input type="submit" value="Iniciar Sesion" id="login" name="login">
     </form>
     <div class="slider">
             <div class="slides">

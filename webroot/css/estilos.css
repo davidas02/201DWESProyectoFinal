@@ -194,7 +194,6 @@ a{
     align-items: center;
     justify-content: center;
 }
-
 .button span {
     cursor: pointer;
     display: inline-block;
@@ -202,7 +201,6 @@ a{
     transition: 0.5s;
     font-size: 1.5rem;
 }
-
 .button span:after {
     content: '\00bb';
     position: absolute;
@@ -211,11 +209,9 @@ a{
     right: -20px;
     transition: 0.5s;
 }
-
 .button:hover span {
     padding-right: 25px;
 }
-
 .button:hover span:after {
     opacity: 1;
     right: 0;

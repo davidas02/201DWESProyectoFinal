@@ -28,7 +28,6 @@ if(isset($_REQUEST['mtoDptos'])){
 if(isset($_REQUEST['rest'])){
     $_SESSION['paginaEnCurso']='rest';
     $_SESSION['paginaAnterior']='inicioPrivado';
-    $_SESSION['muestraApiAjena']=null;
     header("Location: index.php");
     exit(); 
 }
