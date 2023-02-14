@@ -1,8 +1,9 @@
 <?php
 if (isset($_REQUEST['salir'])){
     $_SESSION['paginaEnCurso']='inicioPublico';
-    $_SESSION['User204DWESLoginLogoff']=null;
+    $_SESSION['usuarioDAW201AppFinal']=null;
     session_destroy();
+    $_SESSION['paginaEnCurso']='inicioPublico';
     header("Location: index.php");
     exit(); 
 }
@@ -13,13 +14,13 @@ if(isset($_REQUEST['detalle'])){
     exit();
 }
 if(isset($_REQUEST['modificar'])){
-    $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
+    $_SESSION['paginaAnterior']='inicioPrivado';
     $_SESSION['paginaEnCurso']='miCuenta';
     header("Location: index.php");
     exit(); 
 }
 if(isset($_REQUEST['mtoDptos'])){
-    $_SESSION['paginaEnCurso']='wip';
+    $_SESSION['paginaEnCurso']='mantenimientoDepartamentos';
     $_SESSION['paginaAnterior']='inicioPrivado';
     header("Location: index.php");
     exit(); 

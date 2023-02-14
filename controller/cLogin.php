@@ -12,11 +12,12 @@ if(isset($_REQUEST['registro'])){
     $_SESSION['paginaEnCurso']="registro";
     header('Location: index.php');
 }
-if (isset($_REQUEST['iniciarSesion'])) {
-    $aErrores = [
+$aErrores = [
         'usuario' => null,
         'password' => null
     ];
+if (isset($_REQUEST['iniciarSesion'])) {
+    
     $entradaOk = true;
     $oUsuario = null;
     //Comprobamos que el usuario no haya introducido inyeccion de codigo y los datos están correctos

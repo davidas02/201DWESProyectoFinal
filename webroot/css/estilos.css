@@ -99,6 +99,10 @@ main{
     align-content: flex-end;
     justify-content: center;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 /*Navegación Manual*/
 .navigation-manual{
     position: absolute;
@@ -248,6 +252,14 @@ h2{
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
+}
+.mantenimiento{
+    display: flex;
+    height: 100%;
+    width: 100%; 
+}
+.mantenimiento tr,.mantenimiento td,.mantenimiento th{
+    border: 1px solid black;
 }
 /*Pie de pagina*/
 footer{
