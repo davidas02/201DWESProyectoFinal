@@ -261,6 +261,10 @@ h2{
 .mantenimiento tr,.mantenimiento td,.mantenimiento th{
     border: 1px solid black;
 }
+.editarDepartamento form{
+    display: flex;
+    flex-flow: column;
+}
 /*Pie de pagina*/
 footer{
     flex: 0 0 8%;
