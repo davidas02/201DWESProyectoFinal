@@ -3,7 +3,7 @@
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <input type="submit" value="Volver" id="volver" name="volver"/>
             <div id="buscar" style="border: 1px solid black; margin: 10px">
-                <input type="text" id="descDepto" value="<?php echo $aRespuestas['buscarDepartamento']; ?>" name="descDepto">
+                <input type="text" id="descDepto" value="<?php echo $_SESSION['buscarDepartamentoPorCodigo']; ?>" name="descDepto">
                 <input type="submit" value="Buscar" name="buscarDesc"  id="buscarDesc"/>
                 <!--<p>ESTADO:</p> 
                 <label for="alta">Alta</label>

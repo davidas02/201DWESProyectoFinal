@@ -20,6 +20,7 @@ if(isset($_REQUEST['modificar'])){
     exit(); 
 }
 if(isset($_REQUEST['mtoDptos'])){
+    $_SESSION['buscarDepartamentoPorCodigo'] ="";
     $_SESSION['paginaEnCurso']='mantenimientoDepartamentos';
     $_SESSION['paginaAnterior']='inicioPrivado';
     header("Location: index.php");

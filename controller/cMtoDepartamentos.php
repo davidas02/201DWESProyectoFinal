@@ -30,6 +30,7 @@ if (!isset($_REQUEST['buscarDesc'])) {
 }
 if (isset($_REQUEST['volver'])) {
     $_SESSION['codDepartamentoEnCurso'] = null;
+    $_SESSION['buscarDepartamentoPorCodigo'] = null;
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     header('Location: index.php');
     exit;
@@ -51,11 +52,11 @@ if (isset($_REQUEST['buscarDesc'])) {
         }
     }
     if ($entradaOk) {
-        $aRespuestas['buscarDepartamento'] = $_REQUEST['descDepto'];
-        $aDepartamentos = DepartamentoPDO::buscarDepartamentoPorDesc($aRespuestas['buscarDepartamento']);
+        $_SESSION['buscarDepartamentoPorCodigo'] = $_REQUEST['descDepto'];
+        $aDepartamentos = DepartamentoPDO::buscarDepartamentoPorDesc($_SESSION['buscarDepartamentoPorCodigo']);
 
 //Si DepartamentoPDO ha devuelto resultado válido(un array)
-        if ($aDepartamentos) {
+        if (is_array($aDepartamentos)) {
             //Recorro el array y por cada objeto...
             foreach ($aDepartamentos as $oDepartamento) {
                 /**
