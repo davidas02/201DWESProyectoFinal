@@ -12,11 +12,10 @@ if (isset($_REQUEST['volver'])) {
 $aRespuestas=[
     "valor"=>null,
     "origen"=>null,
-    "destino"=>null
+    "destino"=>null,
 ];
 $muestra=null;
 if(isset($_REQUEST['convertir'])){
-    
     $entradaOk=true;
     $aErrores=[
         'cantidad'=>null
@@ -27,7 +26,7 @@ if(isset($_REQUEST['convertir'])){
             $entradaOk = false;
         }
     }
-    
+    //Si todo esta OK y la moneda de origen y destino son diferentes se ejecuta
     if($entradaOk&&$_REQUEST['origen']!=$_REQUEST['destino']){
         $aRespuestas=[
             "valor"=>$_REQUEST['cantidad'],
@@ -37,8 +36,9 @@ if(isset($_REQUEST['convertir'])){
         $salida= REST::convertirMoneda($aRespuestas['valor'], $aRespuestas['origen'],$aRespuestas['destino']);
            
     }
+    
     if($salida!=false && !is_null($salida)){
-        $_SESSION['muestraApiAjena']=$aRespuestas['valor']." ".$aRespuestas['origen']." es igual a ". $salida.$aRespuestas['destino'];
+        $_SESSION['muestraApiAjena']=$aRespuestas['valor']." ".$aRespuestas['origen']." es igual a ". $salida." ".$aRespuestas['destino'];
     }else{
         $_SESSION['muestraApiAjena']=null;
     }
