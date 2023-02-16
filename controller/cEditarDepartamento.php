@@ -23,8 +23,8 @@ if (isset($_REQUEST['aceptar'])){
     $entradaOk=true;
     $aErrores=[
         "codigo"=> validacionFormularios::comprobarAlfabetico($_REQUEST["codigo"],3,3,OBLIGATORIO),
-        "descripcion"=> validacionFormularios::comprobarAlfabetico($_REQUEST['descripcion'],255,5),
-        "volumenNegocio"=> validacionFormularios::comprobarFloat($_REQUEST['volumen'])
+        "descripcion"=> validacionFormularios::comprobarAlfabetico($_REQUEST['descripcion'],255,5,OBLIGATORIO),
+        "volumenNegocio"=> validacionFormularios::comprobarFloat($_REQUEST['volumen'], obligatorio: OBLIGATORIO)
     ];
     foreach ($aErrores as $clave => $valor) {
         if ($valor != null) {

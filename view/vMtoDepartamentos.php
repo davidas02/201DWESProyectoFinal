@@ -3,7 +3,10 @@
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <input type="submit" value="Volver" id="volver" name="volver"/>
             <div id="buscar" style="border: 1px solid black; margin: 10px">
-                <input type="text" id="descDepto" value="<?php echo $_SESSION['buscarDepartamentoPorCodigo']; ?>" name="descDepto">
+                <label for="descDepto">Descripción: 
+                    <input type="text" id="descDepto" value="<?php echo $_SESSION['buscarDepartamentoPorCodigo']; ?>" name="descDepto">
+                </label>
+                
                 <input type="submit" value="Buscar" name="buscarDesc"  id="buscarDesc"/>
                 <!--<p>ESTADO:</p> 
                 <label for="alta">Alta</label>
@@ -12,7 +15,6 @@
                 <input type="radio" name="estado" id="baja" value="baja" />
                 <label for="todos">Todos</label>
                 <input type="radio" name="estado" value="todos" id="todos" checked="checked" />-->
-                <input type="submit" value="Añadir" id="addDepartamento">
             </div>
             <?php if ($aDepartamentos != false) { ?>
                 <table style="border: 1px solid black; border-collapse: collapse">
