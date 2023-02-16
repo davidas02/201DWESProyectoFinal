@@ -1,7 +1,35 @@
 <?php
-$aDepartamentos = DepartamentoPDO::buscarDepartamentoPorDesc("");
+
+//Array para guardar los campos del objeto Departamento y mostrarlos en la vista
+$aVMtoDepartamentos = [];
+if (!isset($_REQUEST['buscarDesc'])) {
+    $aDepartamentos = DepartamentoPDO::buscarDepartamentoPorDesc("");
+    if ($aDepartamentos) {
+        //Recorro el array y por cada objeto...
+        foreach ($aDepartamentos as $oDepartamento) {
+            /**
+             * Utilizo el método array_push para introducir los valores devueltos
+             * por los getters para cada objeto departamento.
+             */
+            if ($oDepartamento->getFechaBaja() != null) {
+                $fechaBaja = $oDepartamento->getFechaBaja()->format('Y-m-d H:i:s');
+            } else {
+                $fechaBaja = null;
+            }
+            array_push($aVMtoDepartamentos, [
+                'codDepartamento' => $oDepartamento->getCodDepartamento(),
+                'descDepartamento' => $oDepartamento->getDescDepartamento(),
+                'fechaBaja' => $fechaBaja,
+                'volumenNegocio' => $oDepartamento->getVolumenNegocio(),
+                'fechaAlta' => $oDepartamento->getFechaAlta()
+            ]);
+        }
+    } else {
+        $aErrores['buscarDepartamento'] = "No se encuentra el departamento";
+    }
+}
 if (isset($_REQUEST['volver'])) {
-    $_SESSION['codDepartamentoEnCurso']=null;
+    $_SESSION['codDepartamentoEnCurso'] = null;
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     header('Location: index.php');
     exit;
@@ -12,6 +40,7 @@ $aErrores = [
 $aRespuestas = [
     "buscarDepartamento" => null
 ];
+
 if (isset($_REQUEST['buscarDesc'])) {
     $entradaOk = true;
 
@@ -24,18 +53,43 @@ if (isset($_REQUEST['buscarDesc'])) {
     if ($entradaOk) {
         $aRespuestas['buscarDepartamento'] = $_REQUEST['descDepto'];
         $aDepartamentos = DepartamentoPDO::buscarDepartamentoPorDesc($aRespuestas['buscarDepartamento']);
+
+//Si DepartamentoPDO ha devuelto resultado válido(un array)
+        if ($aDepartamentos) {
+            //Recorro el array y por cada objeto...
+            foreach ($aDepartamentos as $oDepartamento) {
+                /**
+                 * Utilizo el método array_push para introducir los valores devueltos
+                 * por los getters para cada objeto departamento.
+                 */
+                if ($oDepartamento->getFechaBaja() != null) {
+                    $fechaBaja = $oDepartamento->getFechaBaja()->format('Y-m-d H:i:s');
+                } else {
+                    $fechaBaja = null;
+                }
+                array_push($aVMtoDepartamentos, [
+                    'codDepartamento' => $oDepartamento->getCodDepartamento(),
+                    'descDepartamento' => $oDepartamento->getDescDepartamento(),
+                    'fechaBaja' => $fechaBaja,
+                    'volumenNegocio' => $oDepartamento->getVolumenNegocio(),
+                    'fechaAlta' => $oDepartamento->getFechaAlta()
+                ]);
+            }
+        } else {
+            $aErrores['buscarDepartamento'] = "No se encuentra el departamento";
+        }
     }
 }
-if(isset($_REQUEST['editar'])){
-    $_SESSION['departamentoEnCurso']=DepartamentoPDO::buscarDepartamentoPorCodigo($_REQUEST['editar']);
+if (isset($_REQUEST['editar'])) {
+    $_SESSION['departamentoEnCurso'] = DepartamentoPDO::buscarDepartamentoPorCodigo($_REQUEST['editar']);
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
     $_SESSION['paginaEnCurso'] = 'editarDepartamento';
     header('Location: index.php');
     exit;
 }
-if(isset($_REQUEST['borrar'])){
-    $_SESSION['departamentoEnCurso']=DepartamentoPDO::borrarDepartamento($_REQUEST['borrar']);
-     header('Location: index.php');
+if (isset($_REQUEST['borrar'])) {
+    $_SESSION['departamentoEnCurso'] = DepartamentoPDO::borrarDepartamento($_REQUEST['borrar']);
+    header('Location: index.php');
     exit;
 }
 require_once $aVistas['layout'];
