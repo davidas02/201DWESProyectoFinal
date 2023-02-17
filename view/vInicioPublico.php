@@ -11,33 +11,33 @@
                 <input type="radio" name="radio-btn" id="radio5">
                 <input type="radio" name="radio-btn" id="radio6">
                 <div class="slide first">
-                    <a href="doc/EjercicioResumenLoginLogoff-22-23/230110ArbolDeNavegaciónLoginLogoffMulticapaPOO.pdf" target="_blank">
+                    <a href="doc/EjercicioResumenDWES_22-23/230129ArbolDeNavegación.pdf" target="_blank">
                         <img src="doc/img/arbolNavegacion.png" alt="">
                     </a>
                     
                 </div>
                 <div class="slide">
-                    <a href="doc/EjercicioResumenLoginLogoff-22-23/221109CatalogoDeRequisitos.pdf" target="_blank">
+                    <a href="doc/EjercicioResumenDWES_22-23/230129CatalogoDeRequisitos.pdf" target="_blank">
                     <img src="doc/img/catalogoRequsitos.png" alt="">
                     </a>
                 </div>
                 <div class="slide">
-                    <a href="doc/img/230207_DiagramaUML.png" target="_blank">
-                    <img src="doc/img/230207_DiagramaUML.png" alt="">
+                    <a href="doc/EjercicioResumenDWES_22-23/230207_DiagramaUML.png" target="_blank">
+                    <img src="doc/EjercicioResumenDWES_22-23/230207_DiagramaUML.png" alt="">
                     </a>
                 </div>
                 <div class="slide">
-                    <a href="doc/EjercicioResumenLoginLogoff-22-23/230110DiagramaDeClasesGenéricoMulticapaPOO.pdf" target="_blank">
-                    <img src="doc/img/ficherosGenericos.png" alt="">
+                    <a href="doc/EjercicioResumenDWES_22-23/230214_DWES201_UsoDeLaSesion.pdf" target="_blank">
+                        <img src="doc/img/usoSesion.png" alt="">
                     </a>
                 </div>
                 <div class="slide">
-                    <a href="doc/EjercicioResumenLoginLogoff-22-23/201127ModeloFisicoDeDatos20-21.pdf" target="_blank">
+                    <a href="doc/EjercicioResumenDWES_22-23/230129DiagramaDeClases.pdf" target="_blank">
                     <img src="doc/img/modeloFisicoDatos.png" alt="">
                     </a>
                 </div>
                 <div class="slide">
-                    <a href="doc/EjercicioResumenLoginLogoff-22-23/230115LoginLogoffRelaciónDeFicheros.pdf" target="_blank">
+                    <a href="doc/EjercicioResumenDWES_22-23/230129RelacionDeFicheros.pdf" target="_blank">
                     <img src="doc/img/relacionFicheros.png" alt="">
                     </a>
                 </div>

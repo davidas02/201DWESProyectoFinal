@@ -22,11 +22,10 @@
     <?php } ?>
 
     <form name="borrarCuenta" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <p>Desea Borrar el usuario <?php echo$_SESSION['usuarioDAW201AppFinal']->getCodUsuario(); ?></p>
-        <table>    
-        <tr>
-                <td><input type="submit" id="aceptar" value="Borrar Cuenta" name="aceptar"></td>
-                <td><input type="submit" value="Volver" name="volver" id="volver"></td>
+        <table class="formulario">
+            <tr>
+                <td><input type="submit" id="borrar" value="Borrar Cuenta" name="borrar"></td>
+                <td><input type="submit" value="Cancelar" name="cancelar" id="cancelar"></td>
             </tr>
         </table>
     </form>

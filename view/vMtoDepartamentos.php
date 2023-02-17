@@ -2,9 +2,12 @@
     <div class="mantenimiento">
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <input type="submit" value="Volver" id="volver" name="volver"/>
-            <div id="buscar">
-                <input type="text" id="codDepto" value="<?php echo $aRespuestas['buscarDepartamento']; ?>" name="codDepto">
-                <input type="submit" value="Buscar Departamento" name="buscar"  id="buscar"/>
+            <div id="buscar" style="border: 1px solid black; margin: 10px">
+                <label for="descDepto">Descripción: 
+                    <input type="text" id="descDepto" value="<?php echo $_SESSION['buscarDepartamentoPorCodigo']; ?>" name="descDepto">
+                </label>
+                
+                <input type="submit" value="Buscar" name="buscarDesc"  id="buscarDesc"/>
                 <!--<p>ESTADO:</p> 
                 <label for="alta">Alta</label>
                 <input type="radio" name="estado" id="alta" value="Alta" />
@@ -14,49 +17,36 @@
                 <input type="radio" name="estado" value="todos" id="todos" checked="checked" />-->
             </div>
             <?php if ($aDepartamentos != false) { ?>
-            <table style="border: 1px solid black; border-collapse: collapse">
+                <table style="border: 1px solid black; border-collapse: collapse">
                     <thead>
-                        <tr><th>CodUsuario</th><th>DescUsuario</th><th>Fecha Baja</th><th>VolumenNegocio</th><th>FechaAlta</th></tr>
+                        <tr><th>Codigo</th><th>Descripcion</th><th>Fecha Baja</th><th>Volumen de Negocio</th><th>Fecha de Alta</th><th>Editar</th><th>Borrar</th></tr>
                     </thead>
                     <tbody>
                         <?php
-                        
-                        foreach ($aDepartamentos as $posicion => $oDepartamento) {
-                            
-                            ?>
-                            <tr>
-                                <td>
-                                    <?php
-                                    echo $oDepartamento->getCodDepartamento();
+                        foreach ($aVMtoDepartamentos as $departamento) {
+                            ?><tr><?php
+                                foreach ($departamento as $valor) {
                                     ?>
-                                </td>
-                                <td><?php
-                                    echo $oDepartamento->getDescDepartamento();
-                                    ?></td>
-                                <td>
+                                    <td>
+                                        <?php
+                                        echo $valor;
+                                        ?>
+                                    </td>
                                     <?php
-                                    if($oDepartamento->getFechaBaja())
-                                    echo $oDepartamento->getFechaBaja()->format('Y-m-d H:i:s');
-                                    ?>
-                                </td>
-                                <td><?php
-                                    echo $oDepartamento->getVolumenNegocio();
-                                    ?></td>
-                                <td>
-                                    <?php
-                                    echo $oDepartamento->getFechaAlta();
-                                    ?>
-                                </td>
-                                
+                                }
+                                ?>
+                                <td> <button type="submit" value="<?php echo $dato['codDepartamento']; ?>" name="editar">Editar</button> </td>
+                                <td> <button type="submit" value="<?php echo $dato['codDepartamento']; ?>" name="borrar">Borrar</button> </td>
                             </tr>
                             <?php
                         }
-                    } else{ ?>
-                    <p>
-                       No hay Departamentos con esa descripción
-                    </p><?php    
-                    }
+                    } else {
                         ?>
+                    <p>
+                        <?php echo $aErrores['buscarDepartamento']; ?>
+                    </p><?php
+                    }
+                    ?>
                 </tbody>
             </table>
         </form>

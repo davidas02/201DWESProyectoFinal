@@ -20,6 +20,7 @@ if(isset($_REQUEST['modificar'])){
     exit(); 
 }
 if(isset($_REQUEST['mtoDptos'])){
+    $_SESSION['buscarDepartamentoPorCodigo'] ="";
     $_SESSION['paginaEnCurso']='mantenimientoDepartamentos';
     $_SESSION['paginaAnterior']='inicioPrivado';
     header("Location: index.php");
@@ -34,6 +35,8 @@ if(isset($_REQUEST['rest'])){
 if(isset($_REQUEST['error'])){
     $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
     DBPDO::ejecutarConsulta("Select * from meInventoElNombreDeUnaTablaQueNoExiste;");
+     header("Location: index.php");
+    exit(); 
 }
 require_once $aVistas['layout'];
 ?>

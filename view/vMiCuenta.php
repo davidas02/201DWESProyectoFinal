@@ -20,21 +20,22 @@
                 Es la primera vez que te conectas
             </p>
         <?php } ?>
-    <form name="miCuenta" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <table class="formulario">
-            <tr>
-                <td><label for="usuario">Usuario:</label></td>
-                <td><input style="background-color: grey" type="text" name="usuario" class="usuario" value="<?php echo $_SESSION['usuarioDAW201AppFinal']->getCodUsuario(); ?>" readonly="true" /></td>
-            </tr>
-            <tr>
-                <td><label for="nombre">Nombre:</label></td>
-                <td><input type="text" name="nombre" class="nombre" value="<?php echo $_SESSION['usuarioDAW201AppFinal']->getDescUsuario(); ?>" /></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="submit" id="aceptar" value="Aceptar" name="aceptar"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Volver" name="volver" id="volver"></td>
+        <form name="miCuenta" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <table class="formulario">
+                <tr>
+                    <td><label for="usuario">Usuario:</label></td>
+                    <td><input style="background-color: grey" type="text" name="usuario" class="usuario" value="<?php echo $_SESSION['usuarioDAW201AppFinal']->getCodUsuario(); ?>" readonly="true" /></td>
+                </tr>
+                <tr>
+                    <td><label for="nombre">Nombre:</label></td>
+                    <td><input type="text" style="background: yellow;" name="nombre" class="nombre" value="<?php echo $_SESSION['usuarioDAW201AppFinal']->getDescUsuario(); ?>" /></td>
+                    <td style="color: red"><?php echo $errorNombre??""; ?></td>
+                </tr>
+                <tr>
+                    <td></td><td> <input type="submit" id="aceptar" value="Aceptar" name="aceptar"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Volver" name="volver" id="volver"></td>
 
                 <td><input type="submit" value="Borrar Usuario" name="borrarUsuario" id="borrarUsuario"></td>
             
