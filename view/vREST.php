@@ -1,7 +1,7 @@
 <main>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <label for="cantidad">Cantidad:</label>
-            <input type="text" id="cantidad" name="cantidad" value="<?php echo $aRespuestas['cantidad']??""; ?>">
+            <input type="text" id="cantidad" name="cantidad" value="<?php echo $aRespuestas['valor']; ?>">
             <label for="origen">Origen</label>
             <select name="origen">
                 <option value="EUR">Euro</option>
