@@ -23,9 +23,9 @@
                     </thead>
                     <tbody>
                         <?php
-                        foreach ($aVMtoDepartamentos as $dato) {
+                        foreach ($aVMtoDepartamentos as $departamento) {
                             ?><tr><?php
-                                foreach ($dato as $valor) {
+                                foreach ($departamento as $valor) {
                                     ?>
                                     <td>
                                         <?php

@@ -29,7 +29,8 @@
                 </tr>
                 <tr>
                     <td><label for="nombre">Nombre:</label></td>
-                    <td><input type="text" name="nombre" class="nombre" value="<?php echo $_SESSION['usuarioDAW201AppFinal']->getDescUsuario(); ?>" /></td>
+                    <td><input type="text" style="background: yellow;" name="nombre" class="nombre" value="<?php echo $_SESSION['usuarioDAW201AppFinal']->getDescUsuario(); ?>" /></td>
+                    <td style="color: red"><?php echo $errorNombre??""; ?></td>
                 </tr>
                 <tr>
                     <td></td><td> <input type="submit" id="aceptar" value="Aceptar" name="aceptar"></td>
