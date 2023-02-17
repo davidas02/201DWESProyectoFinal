@@ -67,7 +67,8 @@ public static function validarUsuario($codUsuario, $password) {
                 select * from T01_Usuario where T01_CodUsuario="{$codUsuario}";
                 query;
         $oResultado = DBPDO::ejecutarConsulta($query);
-        if (!$oResultado) {
+            $oDatos = $oResultado->fetchObject();
+        if (!$oDatos) {
             $noExiste = false;
         }
         return $noExiste;

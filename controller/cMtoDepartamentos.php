@@ -58,14 +58,14 @@ if (isset($_REQUEST['buscarDesc'])) {
     exit; 
     }
 if (isset($_REQUEST['editar'])) {
-    $_SESSION['departamentoEnCurso'] = DepartamentoPDO::buscarDepartamentoPorCodigo($_REQUEST['editar']);
+    $_SESSION['codDepartamentoEnCurso'] = $_REQUEST['editar'];
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
     $_SESSION['paginaEnCurso'] = 'editarDepartamento';
     header('Location: index.php');
     exit;
 }
 if (isset($_REQUEST['borrar'])) {
-    $_SESSION['departamentoEnCurso'] = DepartamentoPDO::borrarDepartamento($_REQUEST['borrar']);
+    $_SESSION['codDepartamentoEnCurso'] = DepartamentoPDO::borrarDepartamento($_REQUEST['borrar']);
     header('Location: index.php');
     exit;
 }

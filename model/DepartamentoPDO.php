@@ -24,7 +24,7 @@ class DepartamentoPDO {
        $query=<<< sql
                     SELECT * from T02_Departamento where T02_CodDepartamento = '{$codDepartamento}';
                   sql;
-               $resultado=DBPDO::ejecutarConsulta($query);
+                $resultado=DBPDO::ejecutarConsulta($query);
                $oDepartamento = $resultado->fetchObject();
             if(is_object($oDepartamento)){
                    $departamento=new Departamento($oDepartamento->T02_CodDepartamento,$oDepartamento->T02_DescDepartamento,$oDepartamento->T02_FechaBaja,$oDepartamento->T02_VolumenNegocio,$oDepartamento->T02_FechaAlta);

@@ -30,7 +30,7 @@ if(isset($_REQUEST['registro'])){
                 $entradaOk = false;
             }
         }
-        if(UsuarioPDO::validarCodNoExiste($_REQUEST['usuario'])&&$entradaOk){
+        if(UsuarioPDO::validarCodNoExiste($_REQUEST['usuario'])){
             $aErrores['valido']="Ya existe un usuario utilizando ese codigo";
             $entradaOk=false;
         }

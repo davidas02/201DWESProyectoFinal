@@ -1,8 +1,9 @@
 <?php
+$oDepartamento= DepartamentoPDO::buscarDepartamentoPorCodigo($_SESSION['codDepartamentoEnCurso']);
 $aDepartamento=[
-    'codigo'=>$_SESSION['departamentoEnCurso']->getCodDepartamento(),
-    'descripcion'=>$_SESSION['departamentoEnCurso']->getDescDepartamento(),
-    'volumen'=>$_SESSION['departamentoEnCurso']->getVolumenNegocio()
+    'codigo'=>$oDepartamento->getCodDepartamento(),
+    'descripcion'=>$oDepartamento->getDescDepartamento(),
+    'volumen'=>$oDepartamento->getVolumenNegocio()
         ];
 if (isset($_REQUEST['volver'])) {
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];

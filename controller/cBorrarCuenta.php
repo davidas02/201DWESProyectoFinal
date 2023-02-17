@@ -7,7 +7,7 @@ if (isset($_REQUEST['cancelar'])) {
     exit();
 }
 
-if(isset($_REQUEST['aceptar'])){
+if(isset($_REQUEST['borrar'])){
     UsuarioPDO::borrarUsuario($_SESSION['usuarioDAW201AppFinal']->getCodUsuario());
     session_destroy();
      $_SESSION['paginaEnCurso'] = "inicioPublico";
