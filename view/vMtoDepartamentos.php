@@ -35,8 +35,8 @@
                                     <?php
                                 }
                                 ?>
-                                <td> <button type="submit" value="<?php echo $dato['codDepartamento']; ?>" name="editar">Editar</button> </td>
-                                <td> <button type="submit" value="<?php echo $dato['codDepartamento']; ?>" name="borrar">Borrar</button> </td>
+                                <td> <button type="submit" value="<?php echo $departamento['codDepartamento']; ?>" name="editar">Editar</button> </td>
+                                <td> <button type="submit" value="<?php echo $departamento['codDepartamento']; ?>" name="borrar">Borrar</button> </td>
                             </tr>
                             <?php
                         }
