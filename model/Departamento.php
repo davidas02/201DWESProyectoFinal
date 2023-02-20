@@ -3,7 +3,7 @@ class Departamento {
     /**
      * Clase Departamento para crear objetos Departamento
      * @author David Aparicio
-     * @since 1.2.1
+     * @since 1.1.2
      */
     /**
      * Codigo del Departamento

@@ -2,10 +2,11 @@
 
 class Usuario{
     /**
-     * 
-     * @author David Aparicio
-     * @version 1.0
-     */
+ * Clase relacionada con el Usuario de la aplicacion
+ * @author David Aparicio
+ * @version 1.1.3
+ * 
+ */
     private $codUsuario;
     private $password;
     private $descUsuario;

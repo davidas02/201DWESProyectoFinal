@@ -5,6 +5,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 class REST {
+    /**
+ * Clase que trabaja con la/s API/S 
+ * @author David Aparicio
+ * @version 1.1.3
+ * 
+ */
+    /**
+     * Metodo que llama a una API de conversion de moneda
+     * @param float $valor valor a convertir
+     * @param string $origen moneda de origen 
+     * @param string $destino moneda de destino
+     * @return boolean|float Devuelve en caso correcto un dato numerico y, si no devuelve false
+     */
     public static function convertirMoneda($valor,$origen,$destino) {
         $salida=false;
         $key="93bc5e8364eba8c0e754e910";

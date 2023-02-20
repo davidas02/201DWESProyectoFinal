@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
-if (isset($_REQUEST['volver'])) {
+if (isset($_REQUEST['volver'])) {//al pulsar se dirige a la ventana inicioPrivado
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     $_SESSION['muestraApiAjena']=null;
     header('Location: index.php');
@@ -15,7 +15,7 @@ $aRespuestas=[
     "destino"=>null,
 ];
 $muestra=null;
-if(isset($_REQUEST['convertir'])){
+if(isset($_REQUEST['convertir'])){//al pulsar comprueba que el valor introducido sea un numero real
     $entradaOk=true;
     $aErrores=[
         'cantidad'=>null
@@ -36,7 +36,7 @@ if(isset($_REQUEST['convertir'])){
         $salida= REST::convertirMoneda($aRespuestas['valor'], $aRespuestas['origen'],$aRespuestas['destino']);
            
     }
-    
+    //si la salida es diferente a false y la salida es diferente a null se muestra el siguiente mensaje si no no se muestra nada
     if($salida!=false && !is_null($salida)){
         $_SESSION['muestraApiAjena']=$aRespuestas['valor']." ".$aRespuestas['origen']." es igual a ". $salida." ".$aRespuestas['destino'];
     }else{

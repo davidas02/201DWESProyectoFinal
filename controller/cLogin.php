@@ -2,12 +2,12 @@
 
 require_once 'core/221024ValidacionFormularios.php';
 
-if (isset($_REQUEST['cancelar'])) {
+if (isset($_REQUEST['cancelar'])) {//al pulsar se dirige a la ventana inicioPublico
     $_SESSION['paginaEnCurso'] = 'inicioPublico';
     header('Location: index.php');
     exit();
 }
-if(isset($_REQUEST['registro'])){
+if(isset($_REQUEST['registro'])){//al pulsar se dirige a la ventana Registro
     $_SESSION['paginaAnterior']=$_SESSION['paginaEnCurso'];
     $_SESSION['paginaEnCurso']="registro";
     header('Location: index.php');

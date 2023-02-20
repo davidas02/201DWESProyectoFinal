@@ -2,7 +2,7 @@
 /**
  * Fichero almacenaje de las direcciones de los controladores y las vistas
  * @author David Aparicio
- * @version 1.0
+ * @version 1.1.3
  * 
  */
 require_once 'core/221024ValidacionFormularios.php';
