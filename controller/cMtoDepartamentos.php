@@ -65,8 +65,9 @@ if (isset($_REQUEST['editar'])) {//al pulsar se dirige a la ventana editarDepart
     exit;
 }
 if (isset($_REQUEST['borrar'])) { //al pulsar se borra el departamento especificado
-    $_SESSION['codDepartamentoEnCurso'] = DepartamentoPDO::borrarDepartamento($_REQUEST['borrar']);
+    $_SESSION['codDepartamentoEnCurso'] = $_REQUEST['borrar'];
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'borrarDepartamento';
     header('Location: index.php');
-    exit;
 }
 require_once $aVistas['layout'];
