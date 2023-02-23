@@ -103,7 +103,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\DB",
             "name": "DB",
-            "summary": "",
+            "summary": "Interfaz\u0020DB\u0020para\u0020la\u0020ejecucion\u0020de\u0020consultas\u0020sql",
             "url": "classes/DB.html"
         },                {
             "fqsen": "\\DB\u003A\u003AejecutarConsulta\u0028\u0029",
@@ -113,7 +113,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\DBPDO",
             "name": "DBPDO",
-            "summary": "",
+            "summary": "Clase\u0020que\u0020implementa\u0020la\u0020clase\u0020DB\u0020para\u0020ejecutar\u0020una\u0020consulta",
             "url": "classes/DBPDO.html"
         },                {
             "fqsen": "\\DBPDO\u003A\u003AejecutarConsulta\u0028\u0029",
@@ -123,7 +123,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Departamento",
             "name": "Departamento",
-            "summary": "",
+            "summary": "Clase\u0020Departamento\u0020para\u0020crear\u0020objetos\u0020Departamento",
             "url": "classes/Departamento.html"
         },                {
             "fqsen": "\\Departamento\u003A\u003A__construct\u0028\u0029",
@@ -208,7 +208,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\DepartamentoPDO",
             "name": "DepartamentoPDO",
-            "summary": "",
+            "summary": "Clase\u0020con\u0020los\u0020metodos\u0020relacionados\u0020con\u0020la\u0020tabla\u0020T02_Departamento\u0020y\u0020la\u0020clase\u0020Departamento",
             "url": "classes/DepartamentoPDO.html"
         },                {
             "fqsen": "\\DepartamentoPDO\u003A\u003AbuscarDepartamentoPorDesc\u0028\u0029",
@@ -231,9 +231,14 @@ Search.appendIndex(
             "summary": "Metodo\u0020que\u0020borra\u0020el\u0020departamento\u0020especificado\u0020por\u0020\u0024codDepartamento",
             "url": "classes/DepartamentoPDO.html#method_borrarDepartamento"
         },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AaddDepartamento\u0028\u0029",
+            "name": "addDepartamento",
+            "summary": "Funcion\u0020que\u0020a\u00F1ade\u0020un\u0020departamento\u0020a\u0020la\u0020tabla\u0020de\u0020departamentos",
+            "url": "classes/DepartamentoPDO.html#method_addDepartamento"
+        },                {
             "fqsen": "\\ErrorApp",
             "name": "ErrorApp",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020Error\u0020en\u0020la\u0020Aplicaci\u00F3n",
             "url": "classes/ErrorApp.html"
         },                {
             "fqsen": "\\ErrorApp\u003A\u003A__construct\u0028\u0029",
@@ -268,7 +273,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\ErrorApp\u003A\u003A\u0024codError",
             "name": "codError",
-            "summary": "Clase\u0020de\u0020Error\u0020en\u0020la\u0020Aplicaci\u00F3n",
+            "summary": "",
             "url": "classes/ErrorApp.html#property_codError"
         },                {
             "fqsen": "\\ErrorApp\u003A\u003A\u0024descError",
@@ -293,7 +298,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\REST",
             "name": "REST",
-            "summary": "",
+            "summary": "Clase\u0020que\u0020trabaja\u0020con\u0020la\/s\u0020API\/S",
             "url": "classes/REST.html"
         },                {
             "fqsen": "\\REST\u003A\u003AconvertirMoneda\u0028\u0029",
@@ -303,7 +308,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Usuario",
             "name": "Usuario",
-            "summary": "",
+            "summary": "Clase\u0020relacionada\u0020con\u0020el\u0020Usuario\u0020de\u0020la\u0020aplicacion",
             "url": "classes/Usuario.html"
         },                {
             "fqsen": "\\Usuario\u003A\u003A__construct\u0028\u0029",
@@ -383,7 +388,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Usuario\u003A\u003A\u0024codUsuario",
             "name": "codUsuario",
-            "summary": "Clase\u0020relacionada\u0020con\u0020el\u0020Usuario\u0020de\u0020la\u0020aplicacion",
+            "summary": "",
             "url": "classes/Usuario.html#property_codUsuario"
         },                {
             "fqsen": "\\Usuario\u003A\u003A\u0024password",
@@ -418,7 +423,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\UsuarioDB",
             "name": "UsuarioDB",
-            "summary": "",
+            "summary": "Interfaz\u0020de\u0020la\u0020conexion\u0020entre\u0020el\u0020usuario\u0020y\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/UsuarioDB.html"
         },                {
             "fqsen": "\\UsuarioDB\u003A\u003AvalidarUsuario\u0028\u0029",

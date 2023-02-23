@@ -1,11 +1,12 @@
 <?php
-class DepartamentoPDO {
-    /**
+/**
  * Clase con los metodos relacionados con la tabla T02_Departamento y la clase Departamento
  * @author David Aparicio
  * @version 1.1.3
  * 
  */
+class DepartamentoPDO {
+    
 /**
  * Metodo que busca todos los departamentos que contienen la descripcion buscada
  * @param type $descDepartamento descripcion a buscar en la base de datos
@@ -70,5 +71,17 @@ class DepartamentoPDO {
                 delete from T02_Departamento where T02_CodDepartamento='$codDepartamento';
                 query;
         DBPDO::ejecutarConsulta($query);
+    }
+    /**
+     * Funcion que añade un departamento a la tabla de departamentos
+     * @param string $codDepartamento codigo de departamento
+     * @param string $descDepartamento descripcion del departamento
+     * @param float $volumenNegocio volumen de negocio
+     */
+    public static function addDepartamento($codDepartamento,$descDepartamento,$volumenNegocio) {
+        $query=<<<sql
+                    INSERT INTO T02_Departamento (T02_CodDepartamento,T02_DescDepartamento,T02_VolumenNegocio,T02_FechaAlta) values("$codDepartamento","$descDepartamento",$volumenNegocio,now());
+                sql;
+        return DBPDO::ejecutarConsulta($query);
     }
 }

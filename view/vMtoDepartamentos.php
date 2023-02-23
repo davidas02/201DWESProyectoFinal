@@ -2,6 +2,7 @@
     <div class="mantenimiento">
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <input type="submit" value="Volver" id="volver" name="volver"/>
+            <input type="submit" value="Añadir" id="add" name="add"/>
             <div id="buscar" style="border: 1px solid black; margin: 10px">
                 <label for="descDepto">Descripción: 
                     <input type="text" id="descDepto" value="<?php echo $_SESSION['buscarDepartamentoPorCodigo']; ?>" name="descDepto">

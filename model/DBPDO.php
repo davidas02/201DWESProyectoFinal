@@ -1,7 +1,9 @@
 <?php
 
 require_once 'conf/confDBPDO.php';
-
+/**
+ * Clase que implementa la clase DB para ejecutar una consulta
+ */
 class DBPDO implements DB {
 /**
  * Funcion para ejecutar una consulta SQL Es implementado de la clase DB

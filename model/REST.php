@@ -4,13 +4,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
-class REST {
-    /**
+/**
  * Clase que trabaja con la/s API/S 
  * @author David Aparicio
  * @version 1.1.3
  * 
  */
+class REST {
+    
     /**
      * Metodo que llama a una API de conversion de moneda
      * @param float $valor valor a convertir

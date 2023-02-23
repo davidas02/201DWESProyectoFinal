@@ -70,4 +70,9 @@ if (isset($_REQUEST['borrar'])) { //al pulsar se borra el departamento especific
     $_SESSION['paginaEnCurso'] = 'borrarDepartamento';
     header('Location: index.php');
 }
+if (isset($_REQUEST['add'])) { //al pulsar se borra el departamento especificado
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'addDepartamento';
+    header('Location: index.php');
+}
 require_once $aVistas['layout'];

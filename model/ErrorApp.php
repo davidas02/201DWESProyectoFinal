@@ -1,12 +1,12 @@
 <?php
-
-class ErrorApp {
 /**
  * Clase de Error en la Aplicación
  * @author David Aparicio
  * @version 1.1.3
  * 
  */
+class ErrorApp {
+
     private $codError;
     private $descError;
     private $archivoError;
