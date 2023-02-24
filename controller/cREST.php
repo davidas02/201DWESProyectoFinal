@@ -24,6 +24,7 @@ if(isset($_REQUEST['convertir'])){//al pulsar comprueba que el valor introducido
     foreach ($aErrores as $claveError => $mensajeError) {
         if ($mensajeError != null) {
             $entradaOk = false;
+            $_REQUEST[$claveError]='';
         }
     }
     //Si todo esta OK y la moneda de origen y destino son diferentes se ejecuta

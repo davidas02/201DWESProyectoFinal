@@ -33,10 +33,10 @@
                     <td style="color: red"><?php echo $errorNombre??""; ?></td>
                 </tr>
                 <tr>
-                    <td></td><td> <input type="submit" id="aceptar" value="Aceptar" name="aceptar"></td>
+                    <td></td><td> <input type="submit" id="aceptar" value="Aceptar" name="aceptar" class="aceptar"></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="Volver" name="volver" id="volver"></td>
+                    <td><input type="submit" value="Volver" name="volver" id="volver" class="cancelar"></td>
 
                     <td><input type="submit" value="Borrar Usuario" name="borrarUsuario" id="borrarUsuario"></td>
 

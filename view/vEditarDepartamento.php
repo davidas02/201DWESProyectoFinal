@@ -27,8 +27,8 @@
                         <td><input type="text" name="fechaBaja"  value="<?php echo $aVDepartamento['fechaBaja']; ?> " readonly="true" style="background-color: gray;"></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Volver" name="volver" id="volver"/></td>
-                        <td><input type="submit" value="Aceptar" name="aceptar" id="aceptar"/></td>
+                        <td><input type="submit" value="Volver" name="volver" id="volver" class="cancelar"/></td>
+                        <td><input type="submit" value="Aceptar" name="aceptar" id="aceptar" class="aceptar"/></td>
                     </tr>
                 </tbody>
             </table>
