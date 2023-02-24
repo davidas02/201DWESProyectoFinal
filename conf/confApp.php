@@ -2,7 +2,7 @@
 /**
  * Fichero almacenaje de las direcciones de los controladores y las vistas
  * @author David Aparicio
- * @version 1.0
+ * @version 1.1.3
  * 
  */
 require_once 'core/221024ValidacionFormularios.php';
@@ -30,7 +30,9 @@ $aControladores = [ //Array de controladores
     "cambiarPassword"=>"controller/cCambiarPassword.php",
     "mantenimientoDepartamentos"=>"controller/cMtoDepartamentos.php",
     "tecnologias"=>"controller/cTecnologias.php",
-    "editarDepartamento"=>"controller/cEditarDepartamento.php"
+    "editarDepartamento"=>"controller/cEditarDepartamento.php",
+    "borrarDepartamento"=>"controller/cBorrarDepartamento.php",
+    "addDepartamento"=>"controller/cAddDepartamento.php"
     ];
 $aVistas=[ //array de vistas
     "login" => "view/vLogin.php",
@@ -47,5 +49,7 @@ $aVistas=[ //array de vistas
     "cambiarPassword"=>"view/vCambiarPassword.php",
     "mantenimientoDepartamentos"=>"view/vMtoDepartamentos.php",
     "tecnologias"=>"view/vTecnologias.php",
-    "editarDepartamento"=>"view/vEditarDepartamento.php"
+    "editarDepartamento"=>"view/vEditarDepartamento.php",
+    "borrarDepartamento"=>"view/vBorrarDepartamento.php",
+    "addDepartamento"=>"view/vAddDepartamento.php"
 ];

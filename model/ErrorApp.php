@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * Clase de Error en la Aplicación
+ * @author David Aparicio
+ * @version 1.1.3
+ * 
+ */
 class ErrorApp {
 
     private $codError;
@@ -51,7 +56,7 @@ class ErrorApp {
         return $this->archivoError;
     }
     /**
-     * recoge la pagina la cual mostrara cuando cerremos la ventana del error
+     * Rrecoge la pagina la cual mostrara cuando cerremos la ventana del error
      * @return string pagina siguiente
      */
     function getPaginaSiguiente() {

@@ -14,7 +14,7 @@
                 <tr><td colspan="2"><input type="submit" id="iniciarSesion" value="Iniciar Sesion" name="iniciarSesion"></td></tr>
             </table>
         </div>
-        <div class="cancelar">
+        <div class="cancelarInicio">
             <input type="submit" id="cancelar" name="cancelar" value="Cancelar">
         </div>
         <div class="registro">

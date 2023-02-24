@@ -11,7 +11,7 @@ $aVMtoDepartamentos = [];
              * por los getters para cada objeto departamento.
              */
             if ($oDepartamento->getFechaBaja() != null) {
-                $fechaBaja = $oDepartamento->getFechaBaja()->format('Y-m-d H:i:s');
+                $fechaBaja = $oDepartamento->getFechaBaja()->format('d-m-Y H:i:s');
             } else {
                 $fechaBaja = null;
             }
@@ -26,7 +26,7 @@ $aVMtoDepartamentos = [];
     } else {
         $aErrores['buscarDepartamento'] = "No se encuentra el departamento";
     }
-if (isset($_REQUEST['volver'])) {
+if (isset($_REQUEST['volver'])) {//al pulsar se dirige a la ventana inicioPrivado
     $_SESSION['codDepartamentoEnCurso'] = null;
     $_SESSION['buscarDepartamentoPorCodigo'] = null;
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
@@ -40,7 +40,7 @@ $aRespuestas = [
     "buscarDepartamento" => null
 ];
 
-if (isset($_REQUEST['buscarDesc'])) {
+if (isset($_REQUEST['buscarDesc'])) { //al pulsar se comprueba que el valor sea correcta
     $entradaOk = true;
 
     $aErrores['buscarDepartamento'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['descDepto'], 255, 0, 0);
@@ -57,16 +57,22 @@ if (isset($_REQUEST['buscarDesc'])) {
        header('Location: index.php');
     exit; 
     }
-if (isset($_REQUEST['editar'])) {
-    $_SESSION['departamentoEnCurso'] = DepartamentoPDO::buscarDepartamentoPorCodigo($_REQUEST['editar']);
+if (isset($_REQUEST['editar'])) {//al pulsar se dirige a la ventana editarDepartamento
+    $_SESSION['codDepartamentoEnCurso'] = $_REQUEST['editar'];
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
     $_SESSION['paginaEnCurso'] = 'editarDepartamento';
     header('Location: index.php');
     exit;
 }
-if (isset($_REQUEST['borrar'])) {
-    $_SESSION['departamentoEnCurso'] = DepartamentoPDO::borrarDepartamento($_REQUEST['borrar']);
+if (isset($_REQUEST['borrar'])) { //al pulsar se borra el departamento especificado
+    $_SESSION['codDepartamentoEnCurso'] = $_REQUEST['borrar'];
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'borrarDepartamento';
     header('Location: index.php');
-    exit;
+}
+if (isset($_REQUEST['add'])) { //al pulsar se borra el departamento especificado
+    $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
+    $_SESSION['paginaEnCurso'] = 'addDepartamento';
+    header('Location: index.php');
 }
 require_once $aVistas['layout'];

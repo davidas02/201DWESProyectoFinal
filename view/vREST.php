@@ -1,7 +1,9 @@
 <main>
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            <h3>Este REST Convierte el valor escrito de la moneda origen seleccionada por ti y muestra la conversion a la moneda de destino tambien elegida por ti</h3>
+            
             <label for="cantidad">Cantidad:</label>
-            <input type="text" id="cantidad" name="cantidad" value="<?php echo $aRespuestas['cantidad']??""; ?>">
+            <input type="text" id="cantidad" name="cantidad" value="<?php echo $_REQUEST['cantidad']??''; ?>">
             <label for="origen">Origen</label>
             <select name="origen">
                 <option value="EUR">Euro</option>

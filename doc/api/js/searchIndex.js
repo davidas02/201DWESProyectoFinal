@@ -103,7 +103,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\DB",
             "name": "DB",
-            "summary": "",
+            "summary": "Interfaz\u0020DB\u0020para\u0020la\u0020ejecucion\u0020de\u0020consultas\u0020sql",
             "url": "classes/DB.html"
         },                {
             "fqsen": "\\DB\u003A\u003AejecutarConsulta\u0028\u0029",
@@ -113,7 +113,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\DBPDO",
             "name": "DBPDO",
-            "summary": "",
+            "summary": "Clase\u0020que\u0020implementa\u0020la\u0020clase\u0020DB\u0020para\u0020ejecutar\u0020una\u0020consulta",
             "url": "classes/DBPDO.html"
         },                {
             "fqsen": "\\DBPDO\u003A\u003AejecutarConsulta\u0028\u0029",
@@ -123,7 +123,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Departamento",
             "name": "Departamento",
-            "summary": "",
+            "summary": "Clase\u0020Departamento\u0020para\u0020crear\u0020objetos\u0020Departamento",
             "url": "classes/Departamento.html"
         },                {
             "fqsen": "\\Departamento\u003A\u003A__construct\u0028\u0029",
@@ -208,17 +208,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\DepartamentoPDO",
             "name": "DepartamentoPDO",
-            "summary": "",
+            "summary": "Clase\u0020con\u0020los\u0020metodos\u0020relacionados\u0020con\u0020la\u0020tabla\u0020T02_Departamento\u0020y\u0020la\u0020clase\u0020Departamento",
             "url": "classes/DepartamentoPDO.html"
         },                {
             "fqsen": "\\DepartamentoPDO\u003A\u003AbuscarDepartamentoPorDesc\u0028\u0029",
             "name": "buscarDepartamentoPorDesc",
-            "summary": "",
+            "summary": "Metodo\u0020que\u0020busca\u0020todos\u0020los\u0020departamentos\u0020que\u0020contienen\u0020la\u0020descripcion\u0020buscada",
             "url": "classes/DepartamentoPDO.html#method_buscarDepartamentoPorDesc"
+        },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AbuscarDepartamentoPorCodigo\u0028\u0029",
+            "name": "buscarDepartamentoPorCodigo",
+            "summary": "Metodo\u0020que\u0020busca\u0020el\u0020departamento\u0020con\u0020el\u0020codigo\u0020especificado\u0020en\u0020el\u0020parametor\u0020\u0024codDepartamento",
+            "url": "classes/DepartamentoPDO.html#method_buscarDepartamentoPorCodigo"
+        },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AmodificarDepartamento\u0028\u0029",
+            "name": "modificarDepartamento",
+            "summary": "Metodo\u0020que\u0020modifica\u0020en\u0020la\u0020base\u0020de\u0020datos\u0020el\u0020departamento\u0020especificado\u0020por\u0020\u0024codDepartamento",
+            "url": "classes/DepartamentoPDO.html#method_modificarDepartamento"
+        },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AborrarDepartamento\u0028\u0029",
+            "name": "borrarDepartamento",
+            "summary": "Metodo\u0020que\u0020borra\u0020el\u0020departamento\u0020especificado\u0020por\u0020\u0024codDepartamento",
+            "url": "classes/DepartamentoPDO.html#method_borrarDepartamento"
+        },                {
+            "fqsen": "\\DepartamentoPDO\u003A\u003AaddDepartamento\u0028\u0029",
+            "name": "addDepartamento",
+            "summary": "Funcion\u0020que\u0020a\u00F1ade\u0020un\u0020departamento\u0020a\u0020la\u0020tabla\u0020de\u0020departamentos",
+            "url": "classes/DepartamentoPDO.html#method_addDepartamento"
         },                {
             "fqsen": "\\ErrorApp",
             "name": "ErrorApp",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020Error\u0020en\u0020la\u0020Aplicaci\u00F3n",
             "url": "classes/ErrorApp.html"
         },                {
             "fqsen": "\\ErrorApp\u003A\u003A__construct\u0028\u0029",
@@ -248,7 +268,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\ErrorApp\u003A\u003AgetPaginaSiguiente\u0028\u0029",
             "name": "getPaginaSiguiente",
-            "summary": "recoge\u0020la\u0020pagina\u0020la\u0020cual\u0020mostrara\u0020cuando\u0020cerremos\u0020la\u0020ventana\u0020del\u0020error",
+            "summary": "Rrecoge\u0020la\u0020pagina\u0020la\u0020cual\u0020mostrara\u0020cuando\u0020cerremos\u0020la\u0020ventana\u0020del\u0020error",
             "url": "classes/ErrorApp.html#method_getPaginaSiguiente"
         },                {
             "fqsen": "\\ErrorApp\u003A\u003A\u0024codError",
@@ -278,17 +298,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\REST",
             "name": "REST",
-            "summary": "",
+            "summary": "Clase\u0020que\u0020trabaja\u0020con\u0020la\/s\u0020API\/S",
             "url": "classes/REST.html"
         },                {
             "fqsen": "\\REST\u003A\u003AconvertirMoneda\u0028\u0029",
             "name": "convertirMoneda",
-            "summary": "",
+            "summary": "Metodo\u0020que\u0020llama\u0020a\u0020una\u0020API\u0020de\u0020conversion\u0020de\u0020moneda",
             "url": "classes/REST.html#method_convertirMoneda"
         },                {
             "fqsen": "\\Usuario",
             "name": "Usuario",
-            "summary": "",
+            "summary": "Clase\u0020relacionada\u0020con\u0020el\u0020Usuario\u0020de\u0020la\u0020aplicacion",
             "url": "classes/Usuario.html"
         },                {
             "fqsen": "\\Usuario\u003A\u003A__construct\u0028\u0029",
@@ -403,7 +423,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\UsuarioDB",
             "name": "UsuarioDB",
-            "summary": "",
+            "summary": "Interfaz\u0020de\u0020la\u0020conexion\u0020entre\u0020el\u0020usuario\u0020y\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/UsuarioDB.html"
         },                {
             "fqsen": "\\UsuarioDB\u003A\u003AvalidarUsuario\u0028\u0029",
@@ -418,37 +438,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AvalidarUsuario\u0028\u0029",
             "name": "validarUsuario",
-            "summary": "Funcion\u0020validadora\u0020del\u0020usuario",
+            "summary": "Funcion\u0020que\u0020valida\u0020el\u0020usuario",
             "url": "classes/UsuarioPDO.html#method_validarUsuario"
         },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AregistrarUltimaConexion\u0028\u0029",
             "name": "registrarUltimaConexion",
-            "summary": "",
+            "summary": "Clase\u0020que\u0020registra\u0020la\u0020fecha\u0020y\u0020la\u0020hora\u0020de\u0020la\u0020ultima\u0020conexion\u0020de\u0020un\u0020usuario",
             "url": "classes/UsuarioPDO.html#method_registrarUltimaConexion"
         },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AaltaUsuario\u0028\u0029",
             "name": "altaUsuario",
-            "summary": "",
+            "summary": "Funci\u00F3n\u0020que\u0020da\u0020de\u0020alta\u0020un\u0020usuario\u0020en\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/UsuarioPDO.html#method_altaUsuario"
         },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AcambiarPassword\u0028\u0029",
             "name": "cambiarPassword",
-            "summary": "",
+            "summary": "Funci\u00F3n\u0020que\u0020cambia\u0020la\u0020contrase\u00F1a\u0020del\u0020usuario\u0020con\u0020el\u0020que\u0020estamos\u0020loggeado",
             "url": "classes/UsuarioPDO.html#method_cambiarPassword"
         },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AmodificarUsuario\u0028\u0029",
             "name": "modificarUsuario",
-            "summary": "",
+            "summary": "Funcion\u0020que\u0020modifica\u0020la\u0020descripcion\u0020del\u0020usuario",
             "url": "classes/UsuarioPDO.html#method_modificarUsuario"
         },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AborrarUsuario\u0028\u0029",
             "name": "borrarUsuario",
-            "summary": "",
+            "summary": "Funcion\u0020que\u0020borra\u0020el\u0020usuario\u0020especificado\u0020por\u0020el\u0020codigo\u0020de\u0020la\u0020base\u0020de\u0020datos",
             "url": "classes/UsuarioPDO.html#method_borrarUsuario"
         },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AvalidarCodNoExiste\u0028\u0029",
             "name": "validarCodNoExiste",
-            "summary": "",
+            "summary": "Funcion\u0020que\u0020comprueba\u0020que\u0020el\u0020codigo\u0020de\u0020usuario\u0020que\u0020queremos\u0020introducir\u0020no\u0020existe",
             "url": "classes/UsuarioPDO.html#method_validarCodNoExiste"
         },                {
             "fqsen": "\\",

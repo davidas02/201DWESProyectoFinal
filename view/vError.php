@@ -11,19 +11,19 @@
     <table class="tablaerror">
         <tr>
             <th>Codigo</td>
-            <td><?php echo $codError; ?></td>
+            <td><?php echo $aError["codError"]; ?></td>
         </tr>
         <tr>
             <th>Descripcion</th>
-            <td><?php echo $descError; ?></td>
+            <td><?php echo $aError["descError"]; ?></td>
         </tr>
         <tr>
             <th>Archivo</th>
-            <td><?php echo $archivoError; ?></td>
+            <td><?php echo $aError["archivoError"]; ?></td>
         </tr>
         <tr>
             <th>Línea</th>
-            <td><?php echo $lineaError; ?></td>
+            <td><?php echo $aError["lineaError"]; ?></td>
         </tr>
     </table>
 </main>

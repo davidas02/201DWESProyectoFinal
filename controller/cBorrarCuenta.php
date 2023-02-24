@@ -1,24 +1,17 @@
 <?php
 
 $usuarioCorrecto = true;
-if (isset($_REQUEST['volver'])) {
+if (isset($_REQUEST['cancelar'])) {//Si se pulsa cancelar vuelve a la pagina Anterior
     $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
-    $_SESSION['paginaAnterior'] = "inicioPrivado";
     header('Location: index.php');
     exit();
 }
 
-if (isset($_REQUEST['borrar'])) {
-    if ($_SESSION['usuarioDAW201AppFinal']->getcodUsuario()!=$_REQUEST['usuario']||$_REQUEST['password'] != $_REQUEST['Rpassword'] || !UsuarioPDO::validarUsuario($_REQUEST['usuario'], $_REQUEST['password'])) {
-        $usuarioCorrecto = false;
-    }
-    if ($usuarioCorrecto) {
-        UsuarioPDO::borrarUsuario($_SESSION['usuarioDAW201AppFinal']->getCodUsuario());
-        $_SESSION['usuarioDAW201AppFinal'] = null;
-        session_destroy();
-        $_SESSION['paginaEnCurso'] = 'inicioPublico';
-        header('Location: index.php');
-        exit();
-    }
+if(isset($_REQUEST['borrar'])){ //si se pulsa borrar se borra el usuario, se cierra la sesion y redirige al inicio publico
+    UsuarioPDO::borrarUsuario($_SESSION['usuarioDAW201AppFinal']->getCodUsuario());
+    session_destroy();
+     $_SESSION['paginaEnCurso'] = "inicioPublico";
+    header('Location: index.php');
+    exit();
 }
 require_once $aVistas['layout'];

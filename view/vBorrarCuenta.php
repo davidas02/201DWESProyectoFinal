@@ -24,8 +24,8 @@
     <form name="borrarCuenta" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <table class="formulario">
             <tr>
-                <td><input type="submit" id="borrar" value="Borrar Cuenta" name="borrar"></td>
-                <td><input type="submit" value="Cancelar" name="cancelar" id="cancelar"></td>
+                <td><input type="submit" id="borrar" value="Borrar Cuenta" name="borrar" class="aceptar"></td>
+                <td><input type="submit" value="Cancelar" name="cancelar" id="cancelar" class="cancelar"></td>
             </tr>
         </table>
     </form>

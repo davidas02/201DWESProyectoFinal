@@ -2,7 +2,7 @@
     <form name="miCuenta" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <table class="formulario">
             <tr>
-                <td><input type="submit" value="Volver" name="volver" id="volver"></td>
+                <td><input type="submit" value="Volver" name="volver" id="volver" class="cancelar"></td>
             </tr>
             <tr>
                 <td><label for="password">Password Antigua:</label></td>
@@ -20,7 +20,7 @@
                 <td style="color: red;"><?php echo $aErrores['RNpassword']; ?></td>
             </tr>
             <tr>
-                <td><input type="submit" value="Cambiar Contraseña" name="cambiarPassword" id="cambiarPassword"></td>
+                <td><input type="submit" value="Cambiar Contraseña" name="cambiarPassword" id="cambiarPassword" class="aceptar"></td>
             </tr>
         </table>
     </form>

@@ -45,7 +45,7 @@ main{
 .registro{
     text-align: center;
 }
-.cancelar{
+.cancelarInicio{
     align-self: flex-end;
 }
 .wip{
@@ -102,6 +102,12 @@ main{
 a{
     text-decoration: none;
     color: black;
+}
+.aceptar{
+    background-color: green !important;
+}
+.cancelar{
+    background-color: red !important;
 }
 /*Navegación Manual*/
 .navigation-manual{
