@@ -109,6 +109,12 @@ a{
 .cancelar{
     background-color: red !important;
 }
+.error{
+    border: solid 3px #FF0000;
+}
+.correcto{
+    border: solid 3px #039e1d;
+}
 /*Navegación Manual*/
 .navigation-manual{
     position: absolute;
