@@ -32,7 +32,8 @@ $aControladores = [ //Array de controladores
     "tecnologias"=>"controller/cTecnologias.php",
     "editarDepartamento"=>"controller/cEditarDepartamento.php",
     "borrarDepartamento"=>"controller/cBorrarDepartamento.php",
-    "addDepartamento"=>"controller/cAddDepartamento.php"
+    "addDepartamento"=>"controller/cAddDepartamento.php",
+    "mantenimientoDeUsuarios"=>"controller/cMtoUsuarios.php"
     ];
 $aVistas=[ //array de vistas
     "login" => "view/vLogin.php",
@@ -51,5 +52,6 @@ $aVistas=[ //array de vistas
     "tecnologias"=>"view/vTecnologias.php",
     "editarDepartamento"=>"view/vEditarDepartamento.php",
     "borrarDepartamento"=>"view/vBorrarDepartamento.php",
-    "addDepartamento"=>"view/vAddDepartamento.php"
+    "addDepartamento"=>"view/vAddDepartamento.php",
+    "mantenimientoDeUsuarios"=>"view/vMtoUsuarios.php"
 ];

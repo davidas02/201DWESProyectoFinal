@@ -39,5 +39,12 @@ if(isset($_REQUEST['error'])){ //al pulsar se dirige a la ventana error
      header("Location: index.php");
     exit(); 
 }
+if(isset($_REQUEST['mtoUsuarios'])){
+    //$_SESSION['buscarUsuarioPorCodigo'] ="";
+    $_SESSION['paginaEnCurso']='mantenimientoDeUsuarios';
+    $_SESSION['paginaAnterior']='inicioPrivado';
+    header("Location: index.php");
+    exit(); 
+}
 require_once $aVistas['layout'];
 ?>
