@@ -14,13 +14,11 @@ $aRespuestas=[
     "origen"=>null,
     "destino"=>null,
 ];
-$muestra=null;
+$error=null;
 if(isset($_REQUEST['convertir'])){//al pulsar comprueba que el valor introducido sea un numero real
     $entradaOk=true;
-    $aErrores=[
-        'cantidad'=>null
-    ];
-    $aErrores['cantidad']= validacionFormularios::comprobarFloat($_REQUEST['cantidad'], min: 0, obligatorio: OBLIGATORIO);
+    
+    $error= validacionFormularios::comprobarFloat($_REQUEST['cantidad'], min: 0, obligatorio: OBLIGATORIO);
     foreach ($aErrores as $claveError => $mensajeError) {
         if ($mensajeError != null) {
             $entradaOk = false;
