@@ -46,5 +46,17 @@
             </tr>
         </table>
     </form>
+    <div id="captcha" class="captcha">
+            <p>DEMUESTRA QUE NO ERES UN ROBOT:</p>
+            <div id="num1" class="cuestion"></div>
+            <div class="cuestion">+</div>
+            <div id="num2" class="cuestion"></div>
+            <div class="cuestion">=</div>
+            <div class="cuestion resultado"></div>
+
+            <div id="sol1" class="opcaptcha"></div>
+            <div id="sol2" class="opcaptcha"></div>
+            <div id="sol3" class="opcaptcha"></div>
+        </div>
     <script src="webroot/js/registro.js"></script>
 </main>
