@@ -84,4 +84,39 @@ class DepartamentoPDO {
                 sql;
         return DBPDO::ejecutarConsulta($query);
     }
+    /**
+     * Summary Baja lógica de un departamento.
+     * 
+     * Description Función estática que registra la fecha de baja de un departamento.
+     * No borra la tupla, solo añade la fecha de ejecución de esta función.
+     * 
+     * @param string $codDepartamento Código del departamento del que registraremos
+     * su fecha de baja lógica.
+     * @return PDOStatement Resultado de la actualización.
+     */
+    public static function bajaLogicaDepartamento($codDepartamento) {
+        $sSQLActualizacion = <<<QUERY
+                    UPDATE T02_Departamento SET T02_FechaBaja = unix_timestamp(now())
+                    WHERE T02_CodDepartamento= '{$codDepartamento}';
+                QUERY;
+
+        return DBPDO::ejecutarConsulta($sSQLActualizacion);
+    }
+    /**
+     * Rehabilitacion de la baja del departamento
+     * 
+     * Funcion estatica que borra el registro la fecha de baja de un departamento
+     * 
+     * @param string $codDepartamento codigo del departamento a rehabilitar
+     * @return boolean Devuelve true si la consulta se ha ejecutado correctamente y false si no
+     */
+    public static function rehabilitarDepartamento($codDepartamento) {
+         $sSQLActualizacion = <<<QUERY
+                    UPDATE T02_Departamento SET T02_FechaBaja = null
+                    WHERE T02_CodDepartamento= '{$codDepartamento}';
+                QUERY;
+
+        return DBPDO::ejecutarConsulta($sSQLActualizacion);
+    }
+
 }

@@ -69,10 +69,24 @@ if (isset($_REQUEST['borrar'])) { //al pulsar se borra el departamento especific
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
     $_SESSION['paginaEnCurso'] = 'borrarDepartamento';
     header('Location: index.php');
+    exit();
+}
+if (isset($_REQUEST['rehabilitar'])) {
+    $_SESSION['codDepartamentoEnCurso'] = $_REQUEST['rehabilitar'];
+    DepartamentoPDO::rehabilitarDepartamento($_SESSION['codDepartamentoEnCurso']);
+    header("Location: index.php");
+    exit();
+}
+if (isset($_REQUEST['deshabilitar'])) {
+    $_SESSION['codDepartamentoEnCurso'] = $_REQUEST['deshabilitar'];
+    DepartamentoPDO::bajaLogicaDepartamento($_SESSION['codDepartamentoEnCurso']);
+    header("Location: index.php");
+    exit();
 }
 if (isset($_REQUEST['add'])) { //al pulsar se borra el departamento especificado
     $_SESSION['paginaAnterior'] = $_SESSION['paginaEnCurso'];
     $_SESSION['paginaEnCurso'] = 'addDepartamento';
     header('Location: index.php');
+    exit();
 }
 require_once $aVistas['layout'];

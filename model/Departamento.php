@@ -43,7 +43,8 @@ class Departamento {
         $this->codDepartamento=$codDepartamento;
         $this->descDepartamento=$descDepartamento;
         if($fechaBaja!=null){
-        $this->fechaBaja= new DateTime($fechaBaja);
+            $fecha=new DateTime();
+        $this->fechaBaja= $fecha->setTimestamp($fechaBaja);
         }else{
             $this->fechaBaja=$fechaBaja;
         }

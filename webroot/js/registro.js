@@ -46,8 +46,10 @@ function comprobarPassword(e) {
 botonEnviar.addEventListener("click", comprobarCampos);
 function comprobarCampos(e) {
         e.preventDefault()
-        let fCorrecto = true
-        if (document.getElementsByClassName("correcto").length < 3) {
+        let fCorrecto = true;
+        console.log("antes");
+        if (document.getElementsByClassName("correcto").length < 4) {
+            console.log("despues");
             fCorrecto = false
             alert("Alguno de los campos tiene un formato incorrecto");
         }

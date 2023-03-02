@@ -9,22 +9,17 @@ if (isset($_REQUEST['volver'])) {//al pulsar se dirige a la ventana inicioPrivad
     header('Location: index.php');
     exit();
 }
-$aRespuestas=[
-    "valor"=>null,
-    "origen"=>null,
-    "destino"=>null,
-];
-$error=null;
 if(isset($_REQUEST['convertir'])){//al pulsar comprueba que el valor introducido sea un numero real
     $entradaOk=true;
-    
-    $error= validacionFormularios::comprobarFloat($_REQUEST['cantidad'], min: 0, obligatorio: OBLIGATORIO);
-    foreach ($aErrores as $claveError => $mensajeError) {
-        if ($mensajeError != null) {
+    $aRespuestas=[
+    "valor"=>null,
+    "origen"=>null,
+    "destino"=>null];
+    $errorFloat= validacionFormularios::comprobarFloat($_REQUEST['cantidad'], min: 0, obligatorio: OBLIGATORIO);
+        if ($errorFloat != null) {
             $entradaOk = false;
-            $_REQUEST[$claveError]='';
+            $_REQUEST['cantidad']='';
         }
-    }
     //Si todo esta OK y la moneda de origen y destino son diferentes se ejecuta
     if($entradaOk&&$_REQUEST['origen']!=$_REQUEST['destino']){
         $aRespuestas=[
@@ -37,12 +32,12 @@ if(isset($_REQUEST['convertir'])){//al pulsar comprueba que el valor introducido
     }
     //si la salida es diferente a false y la salida es diferente a null se muestra el siguiente mensaje si no no se muestra nada
     if($salida!=false && !is_null($salida)){
+        $_SESSION['muestraValor']=$aRespuestas['valor'];
         $_SESSION['muestraApiAjena']=$aRespuestas['valor']." ".$aRespuestas['origen']." es igual a ". $salida." ".$aRespuestas['destino'];
     }else{
         $_SESSION['muestraApiAjena']=null;
     }
     header('Location: index.php');
-    exit();
+    exit;
 }
 require_once $aVistas['layout'];
-
