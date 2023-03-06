@@ -22,7 +22,7 @@ function comprobarUser(e) {
         }
 }
 function comprobarNombre(e) {
-    let reg=/[a-z]{4,}/;
+    let reg=/[a-zA-Z]{4,}/;
         if (reg.test(e.target.value)) {
             e.target.classList.remove("error");
             e.target.classList.add("correcto");

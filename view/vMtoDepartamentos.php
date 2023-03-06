@@ -42,13 +42,13 @@
                                 if (is_null($departamento['fechaBaja'])) {
                                     ?>
                                     <td>
-                                        <button  id="deshabilitar" name="deshabilitar" title="Deshabilitar departamento" value="<?php echo $departamento['codDepartamento']; ?>" style="width: 90%"><span class="material-icons md-18">&uarr;</span></button>
+                                        <button  id="deshabilitar" name="deshabilitar" title="Deshabilitar departamento" value="<?php echo $departamento['codDepartamento']; ?>" style="width: 90%"><span class="material-icons md-18">&darr;</span></button>
                                     </td>
                                     <?php
                                 } else {
                                     ?>
                                     <td>
-                                        <button  id="rehabilitar" name="rehabilitar" title="Rehabilitar departamento" value="<?php echo $departamento['codDepartamento']; ?>" style="width: 90%"><span class="material-icons md-18">&darr;</span></button>
+                                        <button  id="rehabilitar" name="rehabilitar" title="Rehabilitar departamento" value="<?php echo $departamento['codDepartamento']; ?>" style="width: 90%"><span class="material-icons md-18">&uarr;</span></button>
                                     </td>
                                     <?php
                                 }
