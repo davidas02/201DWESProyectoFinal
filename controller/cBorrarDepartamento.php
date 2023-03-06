@@ -12,11 +12,14 @@ if(isset($_REQUEST['borrar'])){
     exit(); 
 }
 $oDepartamento= DepartamentoPDO::buscarDepartamentoPorCodigo($_SESSION['codDepartamentoEnCurso']);//Buscamos el departamento especificado por el codigo en la base de datos y lo devolvemos como un objeto de la clase departamento
+if($oDepartamento->getFechaBaja()!=null){
+$fechaBaja=$oDepartamento->getFechaBaja()->format('d-m-Y H:i:s');
+}else{$fechaBaja=null;}
 $aVDepartamento=[//Recogemos los datos del objeto departamento y los introducimos en el array
     'codigo'=>$oDepartamento->getCodDepartamento(),
     'descripcion'=>$oDepartamento->getDescDepartamento(),
     'volumen'=>$oDepartamento->getVolumenNegocio(),
     'fechaAlta'=>$oDepartamento->getFechaAlta(),
-    'fechaBaja'=>$oDepartamento->getFechaBaja()
+    'fechaBaja'=>$fechaBaja
         ];
 require_once $aVistas['layout'];

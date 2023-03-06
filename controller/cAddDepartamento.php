@@ -1,6 +1,6 @@
 <?php
 if (isset($_REQUEST['volver'])) {//al pulsar vuelve a la pagina anterior
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    $_SESSION['paginaEnCurso'] = "mantenimientoDepartamentos";
     header('Location: index.php');
     exit();
 }
@@ -39,7 +39,7 @@ if (isset($_REQUEST['aceptar'])){//al hacer clic en el boton aceptar comprobarem
         "volumen"=> $_REQUEST['volumen']
         ];
     DepartamentoPDO::addDepartamento($aRespuestas['codigo'], $aRespuestas['descripcion'],$aRespuestas['volumen']);
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    $_SESSION['paginaEnCurso'] = "mantenimientoDepartamentos";
     header('Location: index.php');
     exit();
     }

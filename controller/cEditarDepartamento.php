@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_REQUEST['volver'])) {//al pulsar vuelve a la pagina anterior
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    $_SESSION['paginaEnCurso'] = "mantenimientoDepartamentos";
     header('Location: index.php');
     exit();
 }
@@ -30,17 +30,21 @@ if (isset($_REQUEST['aceptar'])){//al hacer clic en el boton aceptar comprobarem
         "volumenNegocio"=> $_REQUEST['volumen']
         ];
     DepartamentoPDO::modificarDepartamento($_SESSION['codDepartamentoEnCurso'], $aRespuestas['volumenNegocio'], $aRespuestas['descripcion']);
-    $_SESSION['paginaEnCurso'] = $_SESSION['paginaAnterior'];
+    $_SESSION['paginaEnCurso'] = "mantenimientoDepartamentos";
     header('Location: index.php');
     exit();
     }
 }  
 $oDepartamento= DepartamentoPDO::buscarDepartamentoPorCodigo($_SESSION['codDepartamentoEnCurso']);//Buscamos el departamento especificado por el codigo en la base de datos y lo devolvemos como un objeto de la clase departamento
+$fechaBaja=null;
+if($oDepartamento->getFechaBaja()!=null){
+$fechaBaja=$oDepartamento->getFechaBaja()->format('d-m-Y H:i:s');
+}
 $aVDepartamento=[//Recogemos los datos del objeto departamento y los introducimos en el array
     'codigo'=>$oDepartamento->getCodDepartamento(),
     'descripcion'=>$oDepartamento->getDescDepartamento(),
     'volumen'=>$oDepartamento->getVolumenNegocio(),
     'fechaAlta'=>$oDepartamento->getFechaAlta(),
-    'fechaBaja'=>$oDepartamento->getFechaBaja()
+    'fechaBaja'=>$fechaBaja
         ];
 require_once $aVistas['layout'];

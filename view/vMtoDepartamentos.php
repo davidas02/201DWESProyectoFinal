@@ -7,7 +7,7 @@
                 <label for="descDepto">Descripción: 
                     <input type="text" id="descDepto" value="<?php echo $_SESSION['buscarDepartamentoPorCodigo']; ?>" name="descDepto">
                 </label>
-                
+
                 <input type="submit" value="Buscar" name="buscarDesc"  id="buscarDesc"/>
                 <!--<p>ESTADO:</p> 
                 <label for="alta">Alta</label>
@@ -20,7 +20,7 @@
             <?php if ($aDepartamentos != false) { ?>
                 <table style="border: 1px solid black; border-collapse: collapse">
                     <thead>
-                        <tr><th>Codigo</th><th>Descripcion</th><th>Fecha Baja</th><th>Volumen de Negocio</th><th>Fecha de Alta</th><th>Editar</th><th>Borrar</th></tr>
+                        <tr><th>Codigo</th><th>Descripcion</th><th>Fecha Baja</th><th>Volumen de Negocio</th><th>Fecha de Alta</th><th>Editar</th><th>Borrar</th><th>Alta/Baja</th></tr>
                     </thead>
                     <tbody>
                         <?php
@@ -38,6 +38,21 @@
                                 ?>
                                 <td> <button type="submit" value="<?php echo $departamento['codDepartamento']; ?>" name="editar">Editar</button> </td>
                                 <td> <button type="submit" value="<?php echo $departamento['codDepartamento']; ?>" name="borrar">Borrar</button> </td>
+                                <?php
+                                if (is_null($departamento['fechaBaja'])) {
+                                    ?>
+                                    <td>
+                                        <button  id="deshabilitar" name="deshabilitar" title="Deshabilitar departamento" value="<?php echo $departamento['codDepartamento']; ?>" style="width: 90%"><span class="material-icons md-18">&darr;</span></button>
+                                    </td>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <td>
+                                        <button  id="rehabilitar" name="rehabilitar" title="Rehabilitar departamento" value="<?php echo $departamento['codDepartamento']; ?>" style="width: 90%"><span class="material-icons md-18">&uarr;</span></button>
+                                    </td>
+                                    <?php
+                                }
+                                ?>
                             </tr>
                             <?php
                         }
@@ -46,8 +61,8 @@
                     <p>
                         <?php echo $aErrores['buscarDepartamento']; ?>
                     </p><?php
-                    }
-                    ?>
+                }
+                ?>
                 </tbody>
             </table>
         </form>
